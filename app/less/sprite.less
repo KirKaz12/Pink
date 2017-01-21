@@ -1,0 +1,46 @@
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.sprite {
+    background-image: url(spritesheet.png);    background-repeat: no-repeat;
+    display: block;
+
+    &.sprite-android-logo {
+        .stitches-sprite(-10px, -10px, 43px, 47px);
+    }
+
+    &.sprite-apple-logo {
+        .stitches-sprite(-73px, -10px, 47px, 56px);
+    }
+
+    &.sprite-logotype-footer-desk {
+        .stitches-sprite(-10px, -86px, 147px, 40px);
+    }
+
+    &.sprite-logotype-footer-tablet {
+        .stitches-sprite(-10px, -146px, 147px, 40px);
+    }
+
+    &.sprite-logotype-head-desk {
+        .stitches-sprite(-10px, -206px, 147px, 40px);
+    }
+
+    &.sprite-logotype-head-tablet {
+        .stitches-sprite(-140px, -10px, 147px, 40px);
+    }
+
+    &.sprite-logotype-mobile {
+        .stitches-sprite(-307px, -10px, 75px, 22px);
+    }
+
+    &.sprite-microsoft-logo {
+        .stitches-sprite(-307px, -52px, 44px, 41px);
+    }
+
+    &.sprite-quotes {
+        .stitches-sprite(-177px, -113px, 79px, 63px);
+    }
+}

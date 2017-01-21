@@ -1,0 +1,28 @@
+
+.header(@size, @color) {
+	font-size: @size;
+	color: @color;
+	font-weight: 300;
+	margin: 0;
+	line-height: 1.5;
+}
+.title(@size, @line, @color) {
+	font-size: @size;
+	color: @color;
+	line-height: @line;
+	font-weight: 700;
+	margin: 0;
+}
+.text(@size, @line, @color) {
+	font-size: @size;
+	color: @color;
+	line-height: @line;
+	font-weight: 400;
+	margin: 0;
+}
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background: url(../../img/spritesheet.png) no-repeat center center;
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}

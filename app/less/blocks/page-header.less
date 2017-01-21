@@ -1,0 +1,318 @@
+.page-header {
+	position: relative;
+	background: url(../../img/mob.jpg) no-repeat center center;
+	background-size: cover;
+	min-height: 730px;
+
+	&__nav {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		background: rgba(29,38,50, .6);
+	}
+	&__nav-wrapper {
+		margin: 0 auto;
+		width: 87.5%;
+		&::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+	&__logo {
+		.stitches-sprite(-307px, -10px, 75px, 22px);
+		float: left;
+	}
+	&__btn {
+		float: right;
+		width: 50px;
+		height: 25px;
+		background: transparent;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		position: relative;
+		transition: all .5s .5s;						
+		&:active {
+			outline: none;
+		}
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 4px;
+			background: #fff;
+			box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
+			transition: all .5s;
+		}
+	}
+	&__menu {
+		position: absolute;
+		.title(18px, 32px, #fff);
+		text-transform: uppercase;
+		text-align: center;
+		left: 0;
+		top: 64px;
+		width: 100%;
+		transition: all 1.5s;
+	}
+	&__menu-item {
+		background: @dark-blue;
+		box-shadow: 0 1px 0 black, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+	}
+	&__menu-link {
+		display: inline-block;
+		width: 100%;
+		padding-top: 20px;
+		padding-bottom: 15px;
+		color: #fff;
+	}
+	.download {
+		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		text-align: center;
+		color: #fff;
+		position: absolute;
+		bottom: -60px;
+		background: @dark-blue;
+		&__header {
+			display: none;
+		}
+		&__btn {
+			.title(18px, 18px, #fff);
+			display: inline-block;
+			width: 280px;
+			min-height: 55px;
+			border: 3px solid white;
+			line-height: 55px;
+			text-align: center;
+			border-radius: 30px;
+			margin-bottom: 40px;
+		}
+		&__logo-wrapper {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		&__logo {
+			display: inline-block;
+			margin-right: 10%;
+			vertical-align: top;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&__logo-link {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+		}
+		&__apple-logo {
+			.stitches-sprite(-73px, -10px, 47px, 56px);
+		}
+		&__android-logo {
+			.stitches-sprite(-10px, -10px, 43px, 47px);
+			vertical-align: bottom;
+		}
+		&__ms-logo {
+			.stitches-sprite(-307px, -52px, 44px, 44px);
+			vertical-align: bottom;
+		}
+		&__avaliable-txt {
+			margin: 0;
+			.text(14px, 24px, #fff);
+			text-align: center;
+			padding: 0 8%;
+		}
+	}
+}
+
+@media @mobile-styles {
+	.page-header {
+		&__nav {
+			&_opened {
+				background: @dark-blue;
+				.page-header__menu {
+					top: 64px;
+				}
+				.page-header__btn {
+					width: 24px;
+					height: 24px;
+					&::before {
+						left: 10px;
+						width: 4px;
+						height: 100%;
+						box-shadow: none;
+						transform: rotate(45deg);
+					}
+					&::after {
+						content: '';
+						display: block;
+						width: 4px;
+						position: absolute;
+						top: 0;
+						right: 10px;
+						height: 100%;
+						background: #fff;
+						transform: rotate(-45deg);
+						transition: all .5s;
+					}
+				}
+			}
+			&_closed {
+				.page-header__menu {
+					top: -1000px;
+				}
+			}
+		}
+	}
+}
+
+@media @tablet-styles {
+	.page-header {
+		background: url(../../img/bg-tablet.jpg) no-repeat center center;
+		background-size: cover;
+		min-height: 730px;
+		&__nav {
+			padding-bottom: 40px;
+			&_opened {
+				background: @dark-blue;
+				.page-header__menu {
+					top: 84px;
+				}
+				.page-header__btn {
+					width: 34px;
+					height: 34px;
+					&::before {
+						left: 15px;
+						width: 4px;
+						height: 100%;
+						box-shadow: none;
+						transform: rotate(45deg);
+					}
+					&::after {
+						content: '';
+						display: block;
+						width: 4px;
+						position: absolute;
+						top: 0;
+						right: 15px;
+						height: 100%;
+						background: #fff;
+						transform: rotate(-45deg);
+						transition: all .5s;
+					}
+				}
+			}
+			&_closed {
+				.page-header__menu {
+					top: -1000px;
+				}
+			}
+		}
+		&__nav-wrapper {
+			width: 88.57%;
+		}
+		&__logo {
+			.stitches-sprite(-140px, -10px, 147px, 40px);
+		}
+		&__btn {
+			top: 13px;
+		}
+		&__menu {
+			top: 84px;
+		}
+		&__download-wrapper {
+			margin: 0 auto;
+			width: 88.57%;
+			&::after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+		}
+		.download {
+			position: static;
+			background: transparent;
+			width: 50%;
+			float: left;
+			padding-top: 85px;
+			&__header {
+				display: block;
+				margin: 0;
+				.header(40px, #fff);
+				padding-left: 18%;
+				padding-right: 18%;
+				margin-bottom: 30px;
+			}
+			&__btn {
+				width: 300px;
+			}
+			&__logo-wrapper {
+				margin-bottom: 30px;
+			}
+			&__avaliable-txt {
+				font-size: 18px;
+				padding-left: 0;
+				padding-right: 4%;
+			}
+		}
+	}
+}
+
+@media @desktop-styles {
+	.page-header {
+		background: url(../../img/bg-desktop.jpg) no-repeat center center;
+		background-size: cover;
+		min-height: 855px;
+		&__nav {
+			padding-top: 25px;
+		}
+		&__logo {
+			.stitches-sprite(-10px, -206px, 147px, 40px);
+		}
+		&__btn {
+			display: none;
+		}
+		&__menu {
+			position: static;
+			width: 70%;
+			padding-left: 3%;
+			float: right;
+			text-align: right;
+		}
+		&__menu-item {
+			background: transparent;
+			display: inline-block;
+			box-shadow: none;
+			line-height: 18px;
+			font-weight: 400;
+			text-transform: none;
+			margin-right: 12%;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		.download {
+			width: 40%;
+			padding-right: 10%;
+			&__header {
+				margin-bottom: 55px;
+				font-size: 50px;
+				padding-right: 0;
+				padding-left: 4%;
+			}
+			&__btn {
+				margin-bottom: 60px;
+			}
+			&__logo-wrapper {
+				margin-bottom: 60px;
+			}
+			&__avaliable-txt {
+				padding-right: 0;
+			}
+		}
+	}
+}
