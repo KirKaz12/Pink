@@ -1,0 +1,117 @@
+.features {
+	position: relative;
+	z-index: 1;
+	top: 60px;
+	background: @white;
+	text-align: center;
+	&__header {
+		position: relative;
+		.header(24px, @dark-blue);
+		margin: 0;
+		text-align: center;
+		padding-top: 45px;
+		padding-bottom: 40px;
+		background: #fff;
+		margin-bottom: 110px;
+		padding-right: 10%;
+		padding-left: 10%;
+		&::after {
+			background: #fff;
+			content: '';
+			position: absolute;
+			display: block;
+			height: 70px;
+			bottom: -40px;
+			left: 0;
+			width: 100%;
+			z-index: 2;
+		    transform: skewY(-5deg);
+		}
+	}
+	&__wrapper {
+		width: 87.5%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	&__item {
+		margin-bottom: 35px;
+		&:last-child {
+			img {
+				display: inline;
+			}
+		}
+	}
+	&__figure-iphone {
+		z-index: 3;
+		margin: 0;
+		text-align: center;
+		img {
+			display: none;
+		}
+	}
+	&__iphone-title {
+		.title(18px, 24px, #000);
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&__iphone-txt {
+		.text(14px, 24px, @dark-blue);
+		text-align: center;
+	}
+	&__figure-effect {
+		display: none;
+	}
+}
+
+@media @mobile-styles {
+	.features {
+		padding-bottom: 320px;
+		&__iphone-img {
+			position: absolute;
+			bottom: 0px;
+			left: 50%;
+			margin-left: -78.5px;
+		}
+	}
+}
+
+@media @tablet-styles {
+	.features {
+		top: 0;
+		padding-top: 0;
+		//background: #fff;
+		&__wrapper {
+			width: 88.57%;
+			position: relative;
+			&::after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+		}
+		&__header {
+			br:first-child {
+				display: none;
+			}
+			font-size: 40px;
+			padding-left: 2%;
+			padding-right: 2%;
+		}
+		&__list {
+			width: 50%;
+			float: right;
+		}
+		&__iphone-title {
+			text-align: left;
+		}
+		&__iphone-txt {
+			text-align: left;
+		}
+		&__iphone-img {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 4;
+		}
+	}
+}

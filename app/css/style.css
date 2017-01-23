@@ -1106,3 +1106,128 @@ ul {
     padding-right: 0;
   }
 }
+.features {
+  position: relative;
+  z-index: 1;
+  top: 60px;
+  background: #f2f2f2;
+  text-align: center;
+}
+.features__header {
+  position: relative;
+  font-size: 24px;
+  color: #1d2631;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  padding-top: 45px;
+  padding-bottom: 40px;
+  background: #fff;
+  margin-bottom: 110px;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+.features__header::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  display: block;
+  height: 70px;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  -webkit-transform: skewY(-5deg);
+      -ms-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+}
+.features__wrapper {
+  width: 87.5%;
+  margin: 0 auto;
+  text-align: center;
+}
+.features__item {
+  margin-bottom: 35px;
+}
+.features__item:last-child img {
+  display: inline;
+}
+.features__figure-iphone {
+  z-index: 3;
+  margin: 0;
+  text-align: center;
+}
+.features__figure-iphone img {
+  display: none;
+}
+.features__iphone-title {
+  font-size: 18px;
+  color: #000;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.features__iphone-txt {
+  font-size: 14px;
+  color: #1d2631;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+.features__figure-effect {
+  display: none;
+}
+@media (max-width: 699px) {
+  .features {
+    padding-bottom: 320px;
+  }
+  .features__iphone-img {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -78.5px;
+  }
+}
+@media (min-width: 700px) {
+  .features {
+    top: 0;
+    padding-top: 0;
+  }
+  .features__wrapper {
+    width: 88.57%;
+    position: relative;
+  }
+  .features__wrapper::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .features__header {
+    font-size: 40px;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .features__header br:first-child {
+    display: none;
+  }
+  .features__list {
+    width: 50%;
+    float: right;
+  }
+  .features__iphone-title {
+    text-align: left;
+  }
+  .features__iphone-txt {
+    text-align: left;
+  }
+  .features__iphone-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+  }
+}
