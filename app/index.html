@@ -34,12 +34,13 @@
     </header>
     <main class="main">
       <section class="features">
-        <h2 class="features__header">Устали от серости мегаполиса? <br/> <br/> Нам есть, что вам предложить!</h2>
+        <h2 class="features__header">Устали от серости мегаполиса? <br class="h1"/> <br class="h2"/> Нам есть, что вам <br class="h3"/> предложить!</h2>
         <div class="features__wrapper">
           <ul class="features__list">
             <li class="features__item">
               <figure class="features__figure-iphone">
                 <picture>
+                  <source srcset="img/iphone-grey.png" media="(min-width: 1050px)"/>
                   <source srcset="" media="(max-width: 699px)"/><img src="img/iphone-grey.png" alt="Поднимает настроение" class="features__iphone-img"/>
                 </picture>
                 <figcaption class="features__iphone-caption">
@@ -51,6 +52,7 @@
             <li class="features__item">
               <figure class="features__figure-iphone">
                 <picture>
+                  <source srcset="img/iphone-red.png" media="(min-width: 1050px)"/>
                   <source srcset="" media="(max-width: 699px)"/><img src="img/iphone-red.png" alt="Меняет мир" class="features__iphone-img"/>
                 </picture>
                 <figcaption class="features__iphone-caption">
@@ -62,6 +64,7 @@
             <li class="features__item">		
               <figure class="features__figure-iphone">
                 <picture>
+                  <source srcset="img/iphone-smile.png" media="(min-width: 1050px)"/>
                   <source srcset="img/iphone-tablet.png" media="(min-width: 700px)"/>
                   <source srcset="img/iphone-smile-mob.png" media="(max-width: 699px)"/><img src="img/iphone-smile.png" alt="Заводит друзей" class="features__iphone-img"/>
                 </picture>
@@ -72,15 +75,82 @@
               </figure>
             </li>
           </ul>
-          <figure class="features__figure-effect">
+        </div>
+      </section>
+      <section class="effect">
+        <div class="effect__wrapper">
+          <figure class="effect__figure">
             <picture>
-              <source srcset=""/><img src="img/timer.png" alt="24 часа" class="features__effect-img"/>
+              <source srcset="none" media="(max-width: 699px)"/>
+              <source srcset="img/timer.png" media="(min-width: 700px)"/><img src="img/timer.png" alt="24 часа" class="effect__timer-img"/>
             </picture>
-            <figcaption class="features__effect-caption">
-              <h3 class="features__effect-title">Эффект на 24 часа!</h3>
-              <p class="features__effect-txt">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p><a href="#" class="features__effect-link">Узнать больше об исследовании</a>
+            <figcaption class="effect__caption">
+              <h3 class="effect__title">Эффект на 24 часа!</h3>
+              <p class="effect__txt">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p><a href="#" class="effect__link">Узнать больше об исследовании</a>
             </figcaption>
           </figure>
+        </div>
+      </section>
+      <section class="feedback">
+        <div class="feedback__wrapper">
+          <ul class="feedback__list">
+            <li class="feedback__item">
+              <figure class="feedback__figure">
+                <div class="feedback__quote-img"></div>
+                <figcaption class="feedback__caption">
+                  <p class="feedback__txt">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии! </p><span class="feedback__title">Николай Петров</span><span class="feedback__sub-title">25 лет, водитель трамвая</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="feedback__item">
+              <figure class="feedback__figure">
+                <div class="feedback__quote-img"></div>
+                <figcaption class="feedback__caption">
+                  <p class="feedback__txt">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии! </p><span class="feedback__title">Николай Петров</span><span class="feedback__sub-title">25 лет, водитель трамвая</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="feedback__item">
+              <figure class="feedback__figure">
+                <div class="feedback__quote-img"></div>
+                <figcaption class="feedback__caption">
+                  <p class="feedback__txt">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии! </p><span class="feedback__title">Николай Петров</span><span class="feedback__sub-title">25 лет, водитель трамвая</span>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="prices">
+        <div class="prices__wrapper">
+          <table class="prices__table">
+            <tbody>
+              <tr class="header">
+                <td class="empty"></td>
+                <td><span class="name">база</span> <span class="price">1,99 USD</span>  </td>
+                <td><span class="name">стандарт</span>  <span class="price">3,99 USD</span> </td>
+                <td><span class="name">анлим</span> <span class="price">9,99 USD</span></td>
+              </tr>
+              <tr class="pink-filter">
+                <td>Розовый фильтр</td>
+                <td><span class="hidden">Розовый фильтр</span> <i class="icon-ok"></i></td>
+                <td><span class="hidden">Розовый фильтр</span> <i class="icon-ok"></i></td>
+                <td><span class="hidden">Розовый фильтр</span> <i class="icon-ok"></i></td>
+              </tr>
+              <tr class="smiles">
+                <td>Смайлики</td>
+                <td><span class="hidden">Смайлики</span> <i class="icon-cancel"></i></td>
+                <td><span class="hidden">Смайлики</span> <i class="icon-ok"></i></td>
+                <td><span class="hidden">Смайлики</span> <i class="icon-ok"></i></td>
+              </tr>
+              <tr class="comments">
+                <td>Комментарии</td>
+                <td><span class="hidden">Комментарии</span> <i class="icon-cancel"></i></td>
+                <td><span class="hidden">Комментарии</span> <i class="icon-cancel"></i></td>
+                <td><span class="hidden">Комментарии</span> <i class="icon-ok"></i></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </main>

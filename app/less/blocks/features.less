@@ -58,14 +58,20 @@
 		.text(14px, 24px, @dark-blue);
 		text-align: center;
 	}
-	&__figure-effect {
-		display: none;
-	}
 }
 
 @media @mobile-styles {
 	.features {
 		padding-bottom: 320px;
+		&__header {
+			br.h1,
+			br.h2 {
+				display: inline;
+			}
+			br.h3 {
+				display: none;
+			}
+		}
 		&__iphone-img {
 			position: absolute;
 			bottom: 0px;
@@ -79,7 +85,7 @@
 	.features {
 		top: 0;
 		padding-top: 0;
-		//background: #fff;
+		padding-bottom: 0;
 		&__wrapper {
 			width: 88.57%;
 			position: relative;
@@ -90,16 +96,25 @@
 			}
 		}
 		&__header {
-			br:first-child {
+			br.h2 {
 				display: none;
+			}
+			br.h3 {
+				display: inline;
 			}
 			font-size: 40px;
 			padding-left: 2%;
 			padding-right: 2%;
+			margin-bottom: 75px;
+			&::after {
+			    height: 95px;
+			    bottom: -50px;
+			}
 		}
 		&__list {
 			width: 50%;
 			float: right;
+			order: 2;
 		}
 		&__iphone-title {
 			text-align: left;
@@ -112,6 +127,53 @@
 			bottom: 0;
 			left: 0;
 			z-index: 4;
+		}
+	}
+}
+
+@media @desktop-styles {
+	.features {
+		&__header {
+			font-size: 50px;
+			padding-bottom: 50px;
+			margin-bottom: 20px;
+			&::after {
+			    height: 140px;
+			    bottom: -85px;
+			    transform: skewY(-3deg);
+			}
+		}
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+		}
+		&__item {
+			width: 30%;
+			margin-right: 5%;
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+		&__iphone-img {
+			display: inline !important;
+			position: static;
+			position: relative;
+			margin-bottom: 50px;
+		}
+		&__iphone-title {
+			text-align: center;
+			font-size: 30px;
+			line-height: 30px;
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+		&__iphone-txt {
+			text-align: center;
+			font-size: 18px;
+			line-height: 30px;
+			padding-left: 5%;
+			padding-right: 5%;
 		}
 	}
 }
