@@ -1,24 +1,49 @@
 section.prices
 	.prices__wrapper
-		table.prices__table
-			tbody
-				tr.header
-					td.empty
-					td #[span.name база] #[span.price 1,99 USD]  
-					td #[span.name стандарт]  #[span.price 3,99 USD] 
-					td #[span.name анлим] #[span.price 9,99 USD]
-				tr.pink-filter
-					td Розовый фильтр
-					td #[span.hidden Розовый фильтр] #[i.icon-ok]
-					td #[span.hidden Розовый фильтр] #[i.icon-ok]
-					td #[span.hidden Розовый фильтр] #[i.icon-ok]
-				tr.smiles
-					td Смайлики
-					td #[span.hidden Смайлики] #[i.icon-cancel]
-					td #[span.hidden Смайлики] #[i.icon-ok]
-					td #[span.hidden Смайлики] #[i.icon-ok]
-				tr.comments
-					td Комментарии
-					td #[span.hidden Комментарии] #[i.icon-cancel]
-					td #[span.hidden Комментарии] #[i.icon-cancel]
-					td #[span.hidden Комментарии] #[i.icon-ok]
+		ul.prices__table
+			li.prices__table-col-1
+				.row-1 #[span.col-1-feature Розовый фильтр]
+				.row-2 #[span.col-1-feature Смайлики]
+				.row-3 #[span.col-1-feature Комментарии]
+			.slides-wrapper
+				li.prices__table-col-2
+					.row-header #[span.name база] #[br] #[span.price 1,99 USD]
+					.row-1 #[span.feature Розовый фильтр] #[i.icon-ok]
+					.row-2 #[span.feature Смайлики] #[i.icon-cancel]
+					.row-3 #[span.feature Комментарии] #[i.icon-cancel]
+				li.prices__table-col-3
+					.row-header #[span.hit хит] #[span.name стандарт] #[br] #[span.price 3,99 USD]
+					.row-1 #[span.feature Розовый фильтр] #[i.icon-ok]
+					.row-2 #[span.feature Смайлики] #[i.icon-ok]
+					.row-3 #[span.feature Комментарии] #[i.icon-cancel]
+				li.prices__table-col-4
+					.row-header #[span.name анлим] #[br] #[span.price 9,99 USD]
+					.row-1 #[span.feature Розовый фильтр] #[i.icon-ok]
+					.row-2 #[span.feature Смайлики] #[i.icon-ok]
+					.row-3 #[span.feature Комментарии] #[i.icon-ok]
+		
+
+
+
+		//- table.prices__table
+		//- 	tbody
+		//- 		tr.header
+		//- 			td.empty
+		//- 			td #[span.name база] #[span.price 1,99 USD]  
+		//- 			td #[span.name стандарт]  #[span.price 3,99 USD] 
+		//- 			td #[span.name анлим] #[span.price 9,99 USD]
+		//- 		tr.pink-filter
+		//- 			td Розовый фильтр
+		//- 			td #[span.hidden Розовый фильтр] #[i.icon-ok]
+		//- 			td #[span.hidden Розовый фильтр] #[i.icon-ok]
+		//- 			td #[span.hidden Розовый фильтр] #[i.icon-ok]
+		//- 		tr.smiles
+		//- 			td Смайлики
+		//- 			td #[span.hidden Смайлики] #[i.icon-cancel]
+		//- 			td #[span.hidden Смайлики] #[i.icon-ok]
+		//- 			td #[span.hidden Смайлики] #[i.icon-ok]
+		//- 		tr.comments
+		//- 			td Комментарии
+		//- 			td #[span.hidden Комментарии] #[i.icon-cancel]
+		//- 			td #[span.hidden Комментарии] #[i.icon-cancel]
+		//- 			td #[span.hidden Комментарии] #[i.icon-ok]

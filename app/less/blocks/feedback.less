@@ -3,9 +3,21 @@
 	z-index: 3;
 	background: #fff;
 	padding-bottom: 40px;
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -50px;
+		left: 0;
+		height: 80px;
+		width: 100%;
+		background: #fff;
+		transform: skewY(-5deg);
+	}
 	&__wrapper {
 		margin: 0 auto;
 		width: 87.5%;
+		max-width: 400px;
 	}
 	&__item {
 		outline: none;
@@ -53,8 +65,13 @@
 
 @media @tablet-styles {
 	.feedback {
+		padding-bottom: 50px;
+		&::after {
+			height: 95px;
+		}
 		&__wrapper {
 			width: 88.57%;
+			max-width: 700px;
 		}
 		&__caption {
 			margin-bottom: 30px;
@@ -78,6 +95,13 @@
 
 @media @desktop-styles {
 	.feedback {
+		&::after {
+			transform: skewY(-3deg);
+			height: 120px;
+		}
+		&__wrapper {
+			max-width: 1000px;
+		}
 		&__quote-img {
 			.stitches-sprite(-177px, -113px, 79px, 63px);
 			margin: 0 auto;

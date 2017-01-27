@@ -31,6 +31,7 @@
 	&__wrapper {
 		width: 87.5%;
 		margin: 0 auto;
+		max-width: 400px;
 		text-align: center;
 	}
 	&__item {
@@ -89,6 +90,7 @@
 		&__wrapper {
 			width: 88.57%;
 			position: relative;
+			max-width: 700px;
 			&::after {
 				content: '';
 				display: table;
@@ -133,6 +135,9 @@
 
 @media @desktop-styles {
 	.features {
+		&__wrapper {
+			max-width: 1000px;
+		}
 		&__header {
 			font-size: 50px;
 			padding-bottom: 50px;

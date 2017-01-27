@@ -1,7 +1,8 @@
 .page-header {
 	position: relative;
-	background: url(../../img/mob.jpg) no-repeat center center;
-	background-size: cover;
+	background: url(../../img/hand-mobile.png) no-repeat center center,
+	url(../../img/header-mob.jpg) no-repeat center center;
+	background-size: 350px, cover;
 	min-height: 730px;
 
 	&__nav {
@@ -12,6 +13,7 @@
 	&__nav-wrapper {
 		margin: 0 auto;
 		width: 87.5%;
+		max-width: 400px;
 		&::after {
 			content: '';
 			display: table;
@@ -78,6 +80,11 @@
 		position: absolute;
 		bottom: -60px;
 		background: @dark-blue;
+		&__wrapper {
+			margin: 0 auto;
+			width: 87.5%;
+			max-width: 400px;
+		}
 		&__header {
 			display: none;
 		}
@@ -124,7 +131,7 @@
 			margin: 0;
 			.text(14px, 24px, #fff);
 			text-align: center;
-			padding: 0 8%;
+			padding: 0 4%;
 		}
 	}
 }
@@ -172,8 +179,9 @@
 
 @media @tablet-styles {
 	.page-header {
-		background: url(../../img/bg-tablet.jpg) no-repeat center center;
-		background-size: cover;
+		background: url(../../img/hand-tablet.png) no-repeat bottom center,
+					url(../../img/header-tablet.jpg) no-repeat center center;
+		background-size: 700px, cover;
 		min-height: 730px;
 		&__nav {
 			padding-bottom: 40px;
@@ -214,6 +222,7 @@
 		}
 		&__nav-wrapper {
 			width: 88.57%;
+			max-width: 700px;
 		}
 		&__logo {
 			.stitches-sprite(-140px, -10px, 147px, 40px);
@@ -227,6 +236,7 @@
 		&__download-wrapper {
 			margin: 0 auto;
 			width: 88.57%;
+			max-width: 700px;
 			&::after {
 				content: '';
 				display: table;
@@ -243,8 +253,8 @@
 				display: block;
 				margin: 0;
 				.header(40px, #fff);
-				padding-left: 18%;
-				padding-right: 18%;
+				//padding-left: 18%;
+				//padding-right: 18%;
 				margin-bottom: 30px;
 			}
 			&__btn {
@@ -264,11 +274,15 @@
 
 @media @desktop-styles {
 	.page-header {
-		background: url(../../img/bg-desktop.jpg) no-repeat center center;
-		background-size: cover;
+		background: url(../../img/hand-desktop.png) no-repeat bottom center,
+					url(../../img/header-desktop.jpg) no-repeat center center;
+		background-size: 1050px, cover;
 		min-height: 855px;
 		&__nav {
 			padding-top: 25px;
+		}
+		&__nav-wrapper {
+			max-width: 1000px;
 		}
 		&__logo {
 			.stitches-sprite(-10px, -206px, 147px, 40px);
@@ -295,9 +309,16 @@
 				margin-right: 0;
 			}
 		}
+		&__download-wrapper {
+			max-width: 1000px;
+		}
 		.download {
 			width: 40%;
-			padding-right: 10%;
+			padding-right: 5%;
+			&__wrapper {
+				max-width: 370px;
+				margin: 0;
+			}
 			&__header {
 				margin-bottom: 55px;
 				font-size: 50px;

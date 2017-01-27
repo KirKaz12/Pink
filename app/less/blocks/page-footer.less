@@ -1,0 +1,99 @@
+.page-footer {
+	padding-top: 35px;
+	padding-bottom: 15px;
+	&__wrapper {
+		margin: 0 auto;
+		width: 87.5%;
+		max-width: 400px;
+	}
+	&__logo {
+		.stitches-sprite(-10px, -146px, 147px, 40px);
+		margin: 0 auto;
+		margin-bottom: 35px;
+	}
+	&__social-wrapper {
+		margin: 0 auto;
+		font-size: 0;
+		text-align: center;
+		margin-bottom: 35px;
+	}
+	&__social-link {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 22px;
+		color: @pink;
+		text-align: center;
+		width: 52px;
+		height: 52px;
+		border-radius: 50%;
+		border: 2px solid #e9ebec;
+		margin-right: 5%;
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+		i {
+			line-height: 48px;
+		}
+	}
+	.icon-googleplay::before {
+		margin-left: 0.5em;
+	}
+	.icon-facebook::before {
+		margin-left: 0;
+	}
+	&__developer-link {
+		.text(14px, 18px, @dark-blue);
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		i {
+			font-size: 34px;
+			color: @pink;
+			position: relative;
+		    top: 5px;
+		}
+	}
+}
+
+@media @tablet-styles {
+	.page-footer {
+		padding-top: 35px;
+		padding-bottom: 35px;
+		&__wrapper {
+			width: 88.57%;
+			max-width: 700px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		&__social-wrapper {
+			margin: 0;
+			width: 30%;
+		}
+		&__logo {
+			margin: 0;
+		}
+		&__developer-link {
+			margin: 0;
+		}
+	}
+}
+
+@media @desktop-styles {
+	.page-footer {
+		padding-top: 70px;
+		padding-bottom: 70px;
+		&__wrapper {
+			max-width: 1000px;
+		}
+		&__logo {
+		 .stitches-sprite(-10px, -86px, 147px, 40px);
+		}
+		&__social-wrapper {
+			width: 21.3%;
+		}
+		&__developer-link {
+			font-size: 18px;
+		}
+	}
+}
