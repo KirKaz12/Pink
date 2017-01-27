@@ -7,11 +7,9 @@
 		position: absolute;
 		display: block;
 		box-sizing: border-box;
-		//height: 50px;
 		bottom: -35px;
 		left: 0;
 		width: 100%;
-		//background: #fff;
 	    z-index: 1;
 	    border-left: 50vw solid transparent;
 	    border-top: 35px solid #fff;
@@ -43,6 +41,14 @@
 	}
 	[class$="-link"] {
 		.header(24px, @pink);
+		transition: all .5s;
+		&:hover {
+			text-decoration: underline;
+			color: @dark-blue;
+		}
+		&:active {
+			opacity: .5;
+		}
 	}
 }
 

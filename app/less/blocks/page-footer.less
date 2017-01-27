@@ -28,11 +28,18 @@
 		border-radius: 50%;
 		border: 2px solid #e9ebec;
 		margin-right: 5%;
+		transition: all .5s;
 		&:nth-child(3n) {
 			margin-right: 0;
 		}
 		i {
 			line-height: 48px;
+		}
+		&:hover {
+			border-color: @dark-blue;
+		}
+		&:active {
+			opacity: .5;
 		}
 	}
 	.icon-googleplay::before {
@@ -51,6 +58,12 @@
 			color: @pink;
 			position: relative;
 		    top: 5px;
+		    transition: all .5s;
+		}
+		&:hover {
+			i {
+				color: @dark-blue;
+			}
 		}
 	}
 }

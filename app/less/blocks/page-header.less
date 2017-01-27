@@ -33,7 +33,7 @@
 		border: none;
 		cursor: pointer;
 		position: relative;
-		transition: all .5s .5s;						
+		transition: all .5s .5s;				
 		&:active {
 			outline: none;
 		}
@@ -48,6 +48,12 @@
 			background: #fff;
 			box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
 			transition: all .5s;
+		}
+		&:hover {
+			&::before {
+				background: @pink;
+				box-shadow: 0 10px 0 @pink, 0 20px 0 @pink;
+			}
 		}
 	}
 	&__menu {
@@ -70,7 +76,11 @@
 		padding-top: 20px;
 		padding-bottom: 15px;
 		color: #fff;
+		&:hover {
+			color: @pink;
+		}
 	}
+
 	.download {
 		width: 100%;
 		padding-top: 30px;
@@ -98,6 +108,14 @@
 			text-align: center;
 			border-radius: 30px;
 			margin-bottom: 40px;
+			transition: all .5s;
+			&:hover {
+				color: @pink;
+				background: #fff;
+			}
+			&:active {
+				color: rgba(210, 40, 86, .3);
+			}
 		}
 		&__logo-wrapper {
 			text-align: center;
@@ -109,6 +127,10 @@
 			vertical-align: top;
 			&:last-child {
 				margin-right: 0;
+			}
+			&:hover {
+				opacity: .5;
+				transition: all .5s;
 			}
 		}
 		&__logo-link {
@@ -166,6 +188,11 @@
 						transform: rotate(-45deg);
 						transition: all .5s;
 					}
+					&:hover {
+						&::after {
+							background: @pink;
+						}
+					}
 				}
 			}
 			&_closed {
@@ -211,6 +238,11 @@
 						background: #fff;
 						transform: rotate(-45deg);
 						transition: all .5s;
+					}
+					&:hover {
+						&::after {
+							background: @pink;
+						}
 					}
 				}
 			}
@@ -307,6 +339,19 @@
 			margin-right: 12%;
 			&:last-child {
 				margin-right: 0;
+			}
+		}
+		&__menu-link {
+			&:hover {
+				color: #fff;
+				border-bottom: 2px solid #fff;
+				line-height: 14px;
+			}
+			&_active {
+				&:hover {
+					color: @pink;
+					border-color: @pink;
+				}
 			}
 		}
 		&__download-wrapper {

@@ -3,6 +3,7 @@ var nav = $(".page-header__nav"),
 	pricesTable = $(".prices__table"),
 	hiddenCol = $(".prices__table-col-1"),
 	tableSlider = $(".slides-wrapper"),
+	navLink = $(".page-header__menu-link"),
 	feedback = {
 		arrows: true,
 		dots: false,
@@ -56,6 +57,14 @@ $(document).ready(function() {
 	nav.addClass("page-header__nav_closed");
 	navBtn.on("click", function() {
 		nav.toggleClass("page-header__nav_closed page-header__nav_opened");
+	});
+	navLink.on("click", function() {
+		var item = $(this).parent(".page-header__menu-item").siblings(".page-header__menu-item");
+		item.each(function() {
+			$(this).children(".page-header__menu-link").removeClass("page-header__menu-link_active")
+		});
+		$(this).addClass("page-header__menu-link_active");
+		
 	});
 	$(".feedback__list").slick(feedback);
 	if(document.body.clientWidth <= 682) {

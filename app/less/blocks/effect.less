@@ -38,9 +38,14 @@
 			margin-bottom: 20px;
 		}
 		&__link {
-			.text(14px, 24px, @dark-blue);
+			.text(14px, 24px, @pink);
 			color: @pink;
 			text-decoration: underline;
+			transition: all .75s;
+			&:hover {
+				text-decoration: underline;
+				color: @dark-blue
+			}
 		}
 	}
 }
