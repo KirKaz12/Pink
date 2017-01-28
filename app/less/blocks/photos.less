@@ -1,0 +1,204 @@
+.photos {
+	&__header {
+		.text(14px, 30px, @blue);
+		text-align: center;
+		background: #fff;
+		width: 87.5%;
+		margin: 0 auto;
+		max-width: 400px;
+		padding: 45px 7%;
+	}
+	&__panorama {
+		position: relative;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	&__panorama-img {
+		min-height: 150px;
+		background: url(../../img/photos/panorama.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	&__panorama-of-day {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 20px;
+		width: 140px;
+		height: 36px;
+		.title(12px, 36px, #fff);
+		background: @pink;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&__panorama-caption {
+		position: relative;
+		width: 87.5%;
+		margin: 0 auto;
+		background: @white;
+		text-align: left;
+		padding: 20px 6%;
+		padding-bottom: 40px;
+		.photos__post-like {
+			.text(12px, 24px, @pink);
+			text-transform: uppercase;
+			position: absolute;
+			bottom: 20px;
+			left: 6%;
+			padding-left: 30px;
+			&::before {
+				content: '\2661';
+				position: absolute;
+				display: inline-block;
+				left: 0;
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 24px;
+			}
+		}
+	}
+	&__panorama-img,
+	&__img {
+		display: block;
+	}
+	&__poster-name {
+		.title(14px, 24px, @blue);
+	}
+	&__post-time {
+		.text(12px, 24px, @blue);
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+	&__post-like {
+		.text(12px, 24px, @pink);
+		text-transform: uppercase;
+		position: relative;
+		padding-left: 30px;
+		&::before {
+			content: '\2661';
+			position: absolute;
+			display: inline-block;
+			left: 0;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 34px;
+		}
+	}
+	&__post-txt {
+		margin: 0;
+		.text(14px, 24px, @blue);
+		margin-bottom: 10px;
+	}
+	&__photos-list {
+		width: 87.5%;
+		margin: 0 auto;
+		max-width: 300px;
+	}
+	&__item {
+		margin-bottom: 20px;
+	}
+	&__caption {
+		position: relative;
+		background: @white;
+		text-align: left;
+		padding: 20px 6%;
+	}
+}
+
+@media @tablet-styles {
+	.photos {
+		&__header {
+			font-size: 18px;
+			padding-top: 100px;
+			padding-bottom: 75px;
+			width: 88.57%;
+			max-width: 700px;
+			padding-left: 14.5%;
+			padding-right: 14.5%;
+		}
+		&__panorama {
+			margin-bottom: 50px;
+		}
+		&__panorama-img {
+			min-height: 510px;
+		}
+		&__panorama-of-day {
+			top: 60px;
+			right: 40px;
+		}
+		&__panorama-caption {
+			width: 88.57%;
+			//max-width: 700px;
+			padding: 25px 5%;
+			.photos__post-like {
+				position: relative;
+				float: right;
+				padding-left: 0;
+				padding-right: 80px;
+				bottom: -3px;
+				width: auto;
+				&::before {
+					left: 120px;
+				}
+			}
+		}
+		&__panorama-title {
+			position: relative;
+			&::after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+		}
+		&__photos-list {
+			max-width: 700px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		&__item {
+			width: 43%;
+		}
+		&__caption {
+			min-height: 155px;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 25px 8%;
+		}
+		&__post-like {
+			margin-top: auto;
+			display: block;
+			width: 100%;
+			padding-left: 0;
+			&::before {
+				line-height: 24px;
+				right: 0;
+				left: initial;
+			}
+		}
+	}
+}
+
+@media @desktop-styles {
+	.photos {
+		&__header {
+			max-width: 1000px;
+			padding-right: 15.5%;
+			padding-left: 15.5%;
+		}
+		&__panorama-of-day {
+			right: 130px;
+		}
+		&__panorama-caption {
+			max-width: 1000px;
+		}
+		&__photos-list {
+			max-width: 1000px;
+		}
+		&__item {
+			width: 30%;
+			margin-bottom: 55px;
+		}
+	}
+}

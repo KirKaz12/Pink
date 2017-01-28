@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Photos</title>
+  </head>
+  <body class="photos-body">
+    <header class="page-header">
+      <nav class="page-header__nav">
+        <div class="page-header__nav-wrapper"><a href="index.html" class="page-header__logo"></a>
+          <button type="button" class="page-header__btn"></button>
+          <ul class="page-header__menu">
+            <li class="page-header__menu-item"> <a href="index.html" class="page-header__menu-link">Главная </a></li>
+            <li class="page-header__menu-item"> <a href="#" class="page-header__menu-link page-header__menu-link_active">Фотографии</a></li>
+            <li class="page-header__menu-item"> <a href="challenge.html" class="page-header__menu-link">Конкурс</a></li>
+            <li class="page-header__menu-item"> <a href="#" class="page-header__menu-link">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="page-header__header">Фотографии <br/> пользователей</h1>
+    </header>
+    <main class="photos-main">
+      <section class="photos">
+        <h2 class="photos__header">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+        <figure class="photos__panorama">
+          <div class="photos__panorama-img"></div><span class="photos__panorama-of-day">Панорама дня</span>
+          <figcaption class="photos__panorama-caption">
+            <div class="photos__panorama-title"><span class="photos__poster-name">Анна <span class="photos__post-time">(5 минут назад)</span></span><a href="#" class="photos__post-like">нравится: <span class="photos__likes-counter">215</span></a></div>
+            <p class="photos__post-txt">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+          </figcaption>
+        </figure>
+        <ul class="photos__photos-list">
+          <li class="photos__item">
+            <figure class="photos__figure"><img src="../../img/photos/car.jpg" alt="Машина" class="photos__img"/>
+              <figcaption class="photos__caption"><span class="photos__poster-name">Левон <span class="photos__post-time">(5 часов назад)</span> </span>
+                <p class="photos__post-txt">Вчера он на луну летал, сегодня в руки к нам попал.</p><a href="#" class="photos__post-like">нравится: <span class="photos__likes-counter">356</span> </a>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="photos__item">
+            <figure class="photos__figure"><img src="../../img/photos/drums.jpg" alt="Барабаны" class="photos__img"/>
+              <figcaption class="photos__caption"><span class="photos__poster-name">Антон <span class="photos__post-time">(12 часов назад)</span> </span>
+                <p class="photos__post-txt">Соседи будут рады!</p><a href="#" class="photos__post-like">нравится: <span class="photos__likes-counter">666</span> </a>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="photos__item">
+            <figure class="photos__figure"><img src="../../img/photos/sky.jpg" alt="Небо" class="photos__img"/>
+              <figcaption class="photos__caption"><span class="photos__poster-name">Борис <span class="photos__post-time">(20 часов назад)</span> </span>
+                <p class="photos__post-txt">Здесь могла быть ваша цитата о высоком и вечном.</p><a href="#" class="photos__post-like">нравится: <span class="photos__likes-counter">215</span> </a>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="photos__item">
+            <figure class="photos__figure"><img src="../../img/photos/kuban.jpg" alt="Кубань" class="photos__img"/>
+              <figcaption class="photos__caption"><span class="photos__poster-name">Сергей <span class="photos__post-time">(25 часов назад)</span> </span>
+                <p class="photos__post-txt">Самая кубанская в мире!</p><a href="#" class="photos__post-like">нравится: <span class="photos__likes-counter">4</span> </a>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="photos__item">
+            <figure class="photos__figure"><img src="../../img/photos/mountains.jpg" alt="Горы" class="photos__img"/>
+              <figcaption class="photos__caption"><span class="photos__poster-name">Максим <span class="photos__post-time">(40 часов назад)</span> </span>
+                <p class="photos__post-txt">Где снег-то?</p><a href="#" class="photos__post-like">нравится: <span class="photos__likes-counter">150</span> </a>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="photos__item">
+            <figure class="photos__figure"><img src="../../img/photos/fly.jpg" alt="Полет" class="photos__img"/>
+              <figcaption class="photos__caption"><span class="photos__poster-name">Надежда <span class="photos__post-time">(45 часов назад)</span> </span>
+                <p class="photos__post-txt">Всем GM и взаимные лайки!</p><a href="#" class="photos__post-like">нравится: <span class="photos__likes-counter">2560</span></a>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+        <section class="photos__upload">
+          <h2 class="photos__upload-header"></h2>
+        </section>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo"></div>
+        <div class="page-footer__social-wrapper"><a href="#" class="page-footer__social-link"><i class="icon-twitter"></i></a><a href="#" class="page-footer__social-link"><i class="icon-facebook"></i></a><a href="#" class="page-footer__social-link"><i class="icon-googleplay"></i></a></div><a href="#" class="page-footer__developer-link">Разработано <i class="icon-github"></i></a>
+      </div>
+    </footer>
+    <script src="libs/jquery-2.2.1.min.js"></script>
+    <script src="libs/slick.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

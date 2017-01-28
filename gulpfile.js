@@ -36,7 +36,8 @@ var gulp         = require('gulp'),
 // Jade
 gulp.task('jade', function() {
     return gulp.src(['app/jade/index.jade',
-                    'app/jade/works.jade'])
+                    'app/jade/photos.jade',
+                    'app/jade/challenge.jade'])
 	    .pipe(plumber(function (error) {
                 gutil.log(error.message); //Продолжаем watch после ошибки
                 this.emit('end');
@@ -116,7 +117,7 @@ gulp.task('browser-sync', function() {
 
 //Набюлдаем за изменениями файлов
 gulp.task('watch', ['browser-sync', 'imgmin', 'htmlminify', 'jsminify', 'jade', 'less'], function() {
-    gulp.watch('app/**/**/*.less', ['less']);
+    gulp.watch('app/**/*.less', ['less']);
     gulp.watch('./app/**/*.jade', ['jade-watch']);
     gulp.watch('app/*.html').on('change', browserSync.reload);
     gulp.watch('app/*.php').on('change', browserSync.reload); 

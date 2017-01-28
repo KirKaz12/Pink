@@ -1169,6 +1169,42 @@ ul {
     padding-right: 0;
   }
 }
+.photos-body .page-header {
+  min-height: 350px;
+  background: url(../../img/header-mob.jpg) no-repeat center center;
+  background-size: cover;
+}
+.photos-body .page-header__header {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  margin-top: 100px;
+}
+@media (min-width: 700px) {
+  .photos-body .page-header {
+    min-height: 450px;
+    background: url(../../img/header-tablet.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  .photos-body .page-header__header {
+    font-size: 50px;
+    margin-top: 80px;
+  }
+}
+@media (min-width: 1050px) {
+  .photos-body .page-header {
+    min-height: 450px;
+    background: url(../../img/header-desktop.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  .photos-body .page-header__header {
+    font-size: 50px;
+    margin-top: 80px;
+  }
+}
 .features {
   position: relative;
   z-index: 1;
@@ -2132,5 +2168,247 @@ ul {
   }
   .page-footer__developer-link {
     font-size: 18px;
+  }
+}
+.photos__header {
+  font-size: 14px;
+  color: #283645;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  background: #fff;
+  width: 87.5%;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 45px 7%;
+}
+.photos__panorama {
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.photos__panorama-img {
+  min-height: 150px;
+  background: url(../../img/photos/panorama.jpg) no-repeat center center;
+  background-size: cover;
+}
+.photos__panorama-of-day {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 140px;
+  height: 36px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 36px;
+  font-weight: 700;
+  margin: 0;
+  background: #d22856;
+  text-align: center;
+  text-transform: uppercase;
+}
+.photos__panorama-caption {
+  position: relative;
+  width: 87.5%;
+  margin: 0 auto;
+  background: #f2f2f2;
+  text-align: left;
+  padding: 20px 6%;
+  padding-bottom: 40px;
+}
+.photos__panorama-caption .photos__post-like {
+  font-size: 12px;
+  color: #d22856;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 20px;
+  left: 6%;
+  padding-left: 30px;
+}
+.photos__panorama-caption .photos__post-like::before {
+  content: '\2661';
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.photos__panorama-img,
+.photos__img {
+  display: block;
+}
+.photos__poster-name {
+  font-size: 14px;
+  color: #283645;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+.photos__post-time {
+  font-size: 12px;
+  color: #283645;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.photos__post-like {
+  font-size: 12px;
+  color: #d22856;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 30px;
+}
+.photos__post-like::before {
+  content: '\2661';
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 34px;
+}
+.photos__post-txt {
+  font-size: 14px;
+  color: #283645;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.photos__photos-list {
+  width: 87.5%;
+  margin: 0 auto;
+  max-width: 300px;
+}
+.photos__item {
+  margin-bottom: 20px;
+}
+.photos__caption {
+  position: relative;
+  background: #f2f2f2;
+  text-align: left;
+  padding: 20px 6%;
+}
+@media (min-width: 700px) {
+  .photos__header {
+    font-size: 18px;
+    padding-top: 100px;
+    padding-bottom: 75px;
+    width: 88.57%;
+    max-width: 700px;
+    padding-left: 14.5%;
+    padding-right: 14.5%;
+  }
+  .photos__panorama {
+    margin-bottom: 50px;
+  }
+  .photos__panorama-img {
+    min-height: 510px;
+  }
+  .photos__panorama-of-day {
+    top: 60px;
+    right: 40px;
+  }
+  .photos__panorama-caption {
+    width: 88.57%;
+    padding: 25px 5%;
+  }
+  .photos__panorama-caption .photos__post-like {
+    position: relative;
+    float: right;
+    padding-left: 0;
+    padding-right: 80px;
+    bottom: -3px;
+    width: auto;
+  }
+  .photos__panorama-caption .photos__post-like::before {
+    left: 120px;
+  }
+  .photos__panorama-title {
+    position: relative;
+  }
+  .photos__panorama-title::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .photos__photos-list {
+    max-width: 700px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .photos__item {
+    width: 43%;
+  }
+  .photos__caption {
+    min-height: 155px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 25px 8%;
+  }
+  .photos__post-like {
+    margin-top: auto;
+    display: block;
+    width: 100%;
+    padding-left: 0;
+  }
+  .photos__post-like::before {
+    line-height: 24px;
+    right: 0;
+    left: initial;
+  }
+}
+@media (min-width: 1050px) {
+  .photos__header {
+    max-width: 1000px;
+    padding-right: 15.5%;
+    padding-left: 15.5%;
+  }
+  .photos__panorama-of-day {
+    right: 130px;
+  }
+  .photos__panorama-caption {
+    max-width: 1000px;
+  }
+  .photos__photos-list {
+    max-width: 1000px;
+  }
+  .photos__item {
+    width: 30%;
+    margin-bottom: 55px;
   }
 }
