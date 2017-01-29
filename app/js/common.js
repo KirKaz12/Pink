@@ -4,6 +4,7 @@ var nav = $(".page-header__nav"),
 	hiddenCol = $(".prices__table-col-1"),
 	tableSlider = $(".slides-wrapper"),
 	navLink = $(".page-header__menu-link"),
+	uploadLabel = $(".photos__upload-label"),
 	feedback = {
 		arrows: true,
 		dots: false,
@@ -33,7 +34,7 @@ var nav = $(".page-header__nav"),
 		slideToScroll: 1
 	};
 var map,
-mapImg = "../img/map-marker.png",
+mapImg = "img/map-marker.png",
 mapMarker;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -54,10 +55,12 @@ function initMap() {
   });
 }
 $(document).ready(function() {
+	
 	nav.addClass("page-header__nav_closed");
 	navBtn.on("click", function() {
 		nav.toggleClass("page-header__nav_closed page-header__nav_opened");
 	});
+	
 	navLink.on("click", function() {
 		var item = $(this).parent(".page-header__menu-item").siblings(".page-header__menu-item");
 		item.each(function() {
@@ -66,26 +69,28 @@ $(document).ready(function() {
 		$(this).addClass("page-header__menu-link_active");
 		
 	});
+
+	uploadLabel.on("click", function() {
+		var uploadItem = $(this)
+						.parent(".photos__upload-control")
+						.siblings(".photos__upload-control");
+		uploadItem.each(function() {
+			$(this).children(".photos__upload-label")
+					.removeClass("photos__upload-label_active");
+		});
+		$(this).addClass("photos__upload-label_active");
+	});
+	
 	$(".feedback__list").slick(feedback);
 	if(document.body.clientWidth <= 682) {
 		tableSlider.slick(pricesSlider)
-		//.slick('slickRemove', 0);
-		//hiddenCol.hide();
 	} 
-	
-	//if(document.body.clientWidth > 682) {
-		//pricesTable.prepend(hiddenCol);
-		//pricesTable.slick("unslick");
-	//} 
 	$(window).resize(function() {
 		if(document.body.clientWidth > 682) {
-			//pricesTable.slick('slickAdd', hiddenCol, 0,1);
 			tableSlider.slick("unslick");
 		} 
 		else {
-			tableSlider.slick(pricesSlider)
-			//.slick('slickRemove', 0);
-			
+			tableSlider.slick(pricesSlider);			
 		} 
 	});
 });

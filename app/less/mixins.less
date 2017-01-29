@@ -21,8 +21,15 @@
 	margin: 0;
 }
 .stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
-    background: url(../../img/spritesheet.png) no-repeat center center;
+    background: url(../img/spritesheet.png) no-repeat center center;
     background-position: @x @y;
     width: @width;
     height: @height;
+}
+.stitches-upload(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background: url(../img/upl.png) no-repeat; 
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+    cursor: pointer;
 }

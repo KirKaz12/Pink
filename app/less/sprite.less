@@ -44,3 +44,35 @@
         .stitches-sprite(-177px, -113px, 79px, 63px);
     }
 }
+
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.stitches-upload(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.upload {
+    background-image: url(spritesheet.png);    
+    background-repeat: no-repeat;
+    display: block;
+
+    &.upload-contrast {
+        .stitches-upload(-5px, -5px, 32px, 32px);
+    }
+
+    &.upload-crop {
+        .stitches-upload(-47px, -5px, 44px, 44px);
+    }
+
+    &.upload-fill {
+        .stitches-upload(-101px, -5px, 48px, 43px);
+    }
+}
+
+
