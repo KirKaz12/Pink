@@ -1,0 +1,353 @@
+.challenge {
+	&__form {
+		display: flex;
+		flew-wrap: wrap;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__header {
+		.text(14px, 30px, @blue);
+		padding-top: 50px;
+		padding-bottom: 50px;
+		text-align: center;
+		margin: 0 auto;
+		width: 87.5%;
+		max-width: 400px;
+	}
+	input,
+	input::placeholder {
+		.text(18px, 30px, @blue);
+	}
+
+	//name
+	&__name-group {
+		order: 1;
+		margin: 0 auto;
+		width: 87.5%;
+		max-width: 400px;
+		margin-bottom: 20px;
+		input {
+			display: block;
+			padding-left: 20px;
+			min-height: 60px;
+			border: 1px solid #e5e5e5;
+			width: 100%;
+		}
+		label {
+			.text(14px, 30px, @pink);
+			display: block;
+			margin-bottom: 25px;
+		}
+	}
+	&__name-span {
+		padding-left: 20px;
+	}
+
+	//applications
+	&__app-group {
+		background: @white;
+		order: 4;
+		width: 100%;
+		padding-bottom: 20px;
+		&-wrapper {
+			margin: 0 auto;
+			width: 87.5%;
+			max-width: 400px;
+		}
+		&-title {
+			display: block;
+			.text(14px, 18px, @pink);
+			padding: 35px 17%;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		input {
+			display: none;
+		}
+		label {
+			.text(18px, 45px, @blue);
+			padding-left: 23%;
+			padding-bottom: 20px;
+			display: block;
+			cursor: pointer;
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				left: 0;
+				top: 0;
+				background: #fff;
+				border: 2px solid #e5e5e5;
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+			}
+		}
+		input:checked + label {
+			&::before {
+				width: 15px;
+				height: 15px;
+				border: 15px solid #fff;
+				background: @pink;
+				box-shadow: 0 2px 0 #e5e5e5,
+							0 -2px 0 #e5e5e5,
+							2px 0 0 #e5e5e5,
+							-2px 0 0 #e5e5e5;
+			}
+		}
+	}
+
+	//contacts
+	&__contact-group {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		order: 3;
+		margin: 0 auto;
+		width: 87.5%;
+		max-width: 400px;
+		&-title {
+			display: none;
+		}
+		input {
+			display: block;
+			padding-left: 20px;
+			min-height: 60px;
+			border: 1px solid #e5e5e5;
+			width: 100%;
+		}
+		label {
+			.text(14px, 30px, @pink);
+			text-transform: uppercase;
+			display: block;
+			margin-bottom: 25px;
+			position: relative;
+			padding-top: 30px;
+		}
+		span {
+			padding-left: 20px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	
+	//achievements
+	&__achievements-group {
+		order: 2;
+		width: 100%;
+		background: @white;
+		input {
+			display: none;
+		}
+		label {
+			cursor: pointer;
+			display: block;
+			position: relative;
+			padding-left: 23%;
+			.text(18px, 30px, @blue);
+			line-height: 45px;
+			padding-bottom: 35px;
+			&::before {
+				font-family: 'fontello';
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: inline-block;
+				color: @pink;
+				width: 39px;
+				height: 39px;
+				background-color: white;
+				border: 2px solid #e5e5e5;
+				text-align: center;
+				font-size: 34px;
+				font-weight: 300;
+			}
+		}
+		input:checked + label {
+			&::before {
+				content: '\e802';
+			}
+		}
+	}
+	&__achievements-wrapper {
+		margin: 0 auto;
+		width: 87.5%;
+		max-width: 400px;
+	}
+	&__achievements-title {
+		display: block;
+		text-align: center;
+		.text(14px, 18px, @pink);
+		text-transform: uppercase;
+		padding: 35px 10%;
+	}
+	
+	//emotions
+	&__emotions {
+		padding-top: 20px;
+		padding-bottom: 50px;
+		order: 5;
+		margin: 0 auto;
+		width: 87.5%;
+		max-width: 400px;
+		&-title {
+			display: block;
+			.text(14px, 18px, @pink);
+			padding: 35px 17%;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		&-text {
+			width: 100%;
+			resize: vertical;
+			padding: 25px 7%;
+			.text(18px, 30px, @blue);
+			min-height: 200px;
+			border: 2px solid #e5e5e5;
+		}
+	}
+	
+	//submit
+	&__submit-btn {
+		order: 6;
+		display: block;
+		width: 87.5%;
+		max-width: 400px;
+		background: #2aab6d;
+		min-height: 60px;
+		.title(18px, 60px, #fff);
+		margin: 0 auto;
+		text-transform: uppercase;
+		text-align: center;
+		outline: none;
+		border: none;
+		margin-bottom: 60px;
+	}
+}
+
+@media @tablet-styles {
+	.challenge {
+		&__header {
+			font-size: 18px;
+		}
+		&__name-group {
+			width: 88.57%;
+			max-width: 700px;
+		}
+		input {
+			width: 85%;
+			display: inline-block;
+			float: right;
+			vertical-align: top;
+		}
+		label {
+			&::after {
+				display: table;
+				content: '';
+				clear: both;
+			}
+		}
+		&__name-span {
+			padding-left: 0;
+			text-transform: uppercase;
+			vertical-align: middle;
+		}
+		&__app-group {
+			background: #fff;
+			order: 2;
+			padding-bottom: 50px;
+			&-wrapper {
+				padding-top: 50px;
+				padding-bottom: 30px;
+				max-width: 700px;
+				width: 88.57%;
+				padding-left: 10%;
+				position: relative;
+				border: 2px solid #e5e5e5;
+			}
+			&-title {
+				position: absolute;
+				top: -9px;
+				left: 50%;
+				margin-left: -184px;
+				z-index: 1;
+				padding: 0 25px;
+				background: #fff;
+			}
+			input {
+				display: none;
+			}
+			label {
+				padding-left: 15%;
+			}
+		}
+		&__contact-group {
+			order: 3;
+			position: relative;
+			border: 2px solid #e5e5e5;
+			max-width: 700px;
+			width: 88.57%;
+			padding: 45px 10%;
+			padding-bottom: 0;
+			margin-bottom: 60px;
+			&-title {
+				display: initial;
+				position: absolute;
+				.text(14px, 18px, @pink);
+				text-transform: uppercase;
+				left: 50% !important;
+				top: -9px !important;
+				padding: 0 25px;
+				margin-left: -121px;
+				z-index: 1;
+				background: #fff;
+			}
+			input {
+				float: left;
+				width: 100%;
+			}
+			label {
+				margin: 0;
+				padding-bottom: 40px;
+				padding-top: 0;
+				margin-bottom: 30px;
+				span {
+					top: initial;
+					bottom: 0;
+				}
+			}
+
+		}
+
+
+		&__achievements-group {
+			background: #fff;
+			order: 4;
+			input {
+				display: none;
+			}
+
+		}
+		&__achievements-wrapper {
+			position: relative;
+			width: 88.57%;
+			max-width: 700px;
+			border: 2px solid #e5e5e5;
+		}
+		&__achievements-title {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: initial;
+			padding: 0;
+			text-align: left;
+		}
+
+
+		&__emotions {
+			order: 5;
+		}
+	}
+}

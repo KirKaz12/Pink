@@ -1,0 +1,48 @@
+section.challenge
+	.challenge__wrapper
+		h2.challenge__header Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+		form.challenge__form
+			.challenge__name-group
+				label.challenge__surname-label(for="surname") #[span.challenge__name-span Фамилия:]
+					input.challenge__surname-input(type="text" id="surname" placeholder="Укажите фамилию" name="surname")
+				label.challenge__name-label(for="name") #[span.challenge__name-span Имя:]
+					input.challenge__name-input(type="text" id="name" placeholder="Введите Ваше имя" name="name")
+				label.challenge__middlename-label(for="middlename") #[span.challenge__name-span Отчество:] 
+					input.challenge__middlename-input(type="text" id="middlename" placeholder="Ну и отчество тоже" name="middlename")
+			.challenge__app-group
+				.challenge__app-group-wrapper
+					span.challenge__app-group-title С каким приложением путешествовали?
+					input.challenge__app-input(type="radio" name="app" id="ios" checked)
+					label.challenge__app-label(for="ios") Pink для iOS
+					input.challenge__app-input(type="radio" name="app" id = "android")
+					label.challenge__app-label(for="android") Pink для Android
+					input.challenge__app-input(type="radio" name="app" id ="windows")
+					label.challenge__app-label(for="windows") Windows Phone
+			.challenge__contact-group
+				span.challenge__contact-group-title Контактная информация
+				label.challenge__number-label(for="phone")
+					input.challenge__number-input(type="text" id="phone" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" name="phone")
+					span.challenge__number-title номер телефона
+				label.challenge__mail-label(for="mail")
+					input.challenge__mail-input(type="text" id="mail" placeholder="Введите почту" name="mail")
+					span.challenge__mail-title адрес почты
+			.challenge__achievements-group
+				.challenge__achievements-wrapper
+					span.challenge__achievements-title Ваши безбашенные достижения в путешествии
+					input.challenge__achievements-input(type="checkbox" name="achievements" id="shark")
+					label(for="shark") Сделал селфи с акулой
+					input.challenge__achievements-input(type="checkbox" name="achievements" id="saw_norris")
+					label(for="saw_norris") Видел Чака Норриса
+					input.challenge__achievements-input(type="checkbox" name="achievements" id="held_tower")
+					label(for="held_tower") Удержал башню
+					input.challenge__achievements-input(type="checkbox" name="achievements" id="overtanned")
+					label(for="overtanned") Обгорел на пляже
+					input.challenge__achievements-input(type="checkbox" name="achievements" id="souvenier")
+					label(for="souvenier") Накупил сувениров
+					input.challenge__achievements-input(type="checkbox" name="achievements" id="hotel")
+					label(for="hotel") Разгромил отель
+			.challenge__emotions
+				span.challenge__emotions-title опишите свои эмоции
+				textarea.challenge__emotions-text(placeholder="Можно прям в красках, не стесняясь в выражениях")
+			button.challenge__submit-btn отправить форму
+

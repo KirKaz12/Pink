@@ -168,7 +168,7 @@
 				}
 				.page-header__btn {
 					width: 24px;
-					height: 24px;
+					height: 25px;
 					&::before {
 						left: 10px;
 						width: 4px;
@@ -416,6 +416,56 @@
 	.photos-body {
 		.page-header {
 			min-height: 450px;
+			background: url(../img/header-desktop.jpg) no-repeat center center;
+			background-size: cover;
+			&__header {
+				font-size: 50px;
+				margin-top: 80px;
+			}
+		}
+	}
+}
+
+// ============= Challenge page =============
+
+.challenge-body {
+	.page-header {
+		min-height: 350px;
+		background: url(../img/header-mob.jpg) no-repeat center center;
+		background-size: cover;
+		&__header {
+			.header(24px, #fff);
+			margin: 0;
+			text-align: center;
+			margin-top: 100px;
+			padding-left: 16%;
+		    padding-right: 16%;
+		}
+	}
+}
+
+@media @tablet-styles {
+	.challenge-body {
+		.page-header {
+			min-height: 450px;
+			padding-bottom: 75px;
+			background: url(../img/header-tablet.jpg) no-repeat center center;
+			background-size: cover;
+			&__header {
+				font-size: 50px;
+				margin-top: 80px;
+			    padding-left: 15%;
+			    padding-right: 15%;
+			}
+		}
+	}
+}
+
+@media @desktop-styles {
+	.challenge-body {
+		.page-header {
+			min-height: 450px;
+			padding-bottom: 75px;
 			background: url(../img/header-desktop.jpg) no-repeat center center;
 			background-size: cover;
 			&__header {

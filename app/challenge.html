@@ -9,8 +9,7 @@
   <body class="challenge-body">
     <header class="page-header">
       <nav class="page-header__nav">
-        <div class="page-header__nav-wrapper">
-          <div class="page-header__logo"></div>
+        <div class="page-header__nav-wrapper"><a href="index.html" class="page-header__logo"></a>
           <button type="button" class="page-header__btn"></button>
           <ul class="page-header__menu">
             <li class="page-header__menu-item"> <a href="index.html" class="page-header__menu-link">Главная </a></li>
@@ -20,24 +19,68 @@
           </ul>
         </div>
       </nav>
-      <div class="page-header__download-wrapper">
-        <section class="download">
-          <div class="download__wrapper">
-            <h1 class="download__header">Взгляните на жизнь иначе!</h1><a href="#" class="download__btn">Скачать приложение</a>
-            <div class="download__logo-wrapper">
-              <div class="download__logo download__apple-logo"><a href="#" class="download__logo-link"></a></div>
-              <div class="download__logo download__android-logo"><a href="#" class="download__logo-link"></a></div>
-              <div class="download__logo download__ms-logo"><a href="#" class="download__logo-link"></a></div>
-            </div>
-            <p class="download__avaliable-txt">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-          </div>
-        </section>
-      </div>
+      <h1 class="page-header__header">Конкурс на самое безбашеное <br/> путешествие с Пинк</h1>
     </header>
-    <main class="challenge-main"></main>
+    <main class="challenge-main">
+      <section class="challenge">
+        <div class="challenge__wrapper">
+          <h2 class="challenge__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h2>
+          <form class="challenge__form">
+            <div class="challenge__name-group">
+              <label for="surname" class="challenge__surname-label"><span class="challenge__name-span">Фамилия:</span>
+                <input type="text" id="surname" placeholder="Укажите фамилию" name="surname" class="challenge__surname-input"/>
+              </label>
+              <label for="name" class="challenge__name-label"><span class="challenge__name-span">Имя:</span>
+                <input type="text" id="name" placeholder="Введите Ваше имя" name="name" class="challenge__name-input"/>
+              </label>
+              <label for="middlename" class="challenge__middlename-label"><span class="challenge__name-span">Отчество:</span> 
+                <input type="text" id="middlename" placeholder="Ну и отчество тоже" name="middlename" class="challenge__middlename-input"/>
+              </label>
+            </div>
+            <div class="challenge__app-group">
+              <div class="challenge__app-group-wrapper"><span class="challenge__app-group-title">С каким приложением путешествовали?</span>
+                <input type="radio" name="app" id="ios" checked="checked" class="challenge__app-input"/>
+                <label for="ios" class="challenge__app-label">Pink для iOS</label>
+                <input type="radio" name="app" id="android" class="challenge__app-input"/>
+                <label for="android" class="challenge__app-label">Pink для Android</label>
+                <input type="radio" name="app" id="windows" class="challenge__app-input"/>
+                <label for="windows" class="challenge__app-label">Windows Phone</label>
+              </div>
+            </div>
+            <div class="challenge__contact-group"><span class="challenge__contact-group-title">Контактная информация</span>
+              <label for="phone" class="challenge__number-label">
+                <input type="text" id="phone" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" name="phone" class="challenge__number-input"/><span class="challenge__number-title">номер телефона</span>
+              </label>
+              <label for="mail" class="challenge__mail-label">
+                <input type="text" id="mail" placeholder="Введите почту" name="mail" class="challenge__mail-input"/><span class="challenge__mail-title">адрес почты</span>
+              </label>
+            </div>
+            <div class="challenge__achievements-group">
+              <div class="challenge__achievements-wrapper"><span class="challenge__achievements-title">Ваши безбашенные достижения в путешествии</span>
+                <input type="checkbox" name="achievements" id="shark" class="challenge__achievements-input"/>
+                <label for="shark">Сделал селфи с акулой</label>
+                <input type="checkbox" name="achievements" id="saw_norris" class="challenge__achievements-input"/>
+                <label for="saw_norris">Видел Чака Норриса</label>
+                <input type="checkbox" name="achievements" id="held_tower" class="challenge__achievements-input"/>
+                <label for="held_tower">Удержал башню</label>
+                <input type="checkbox" name="achievements" id="overtanned" class="challenge__achievements-input"/>
+                <label for="overtanned">Обгорел на пляже</label>
+                <input type="checkbox" name="achievements" id="souvenier" class="challenge__achievements-input"/>
+                <label for="souvenier">Накупил сувениров</label>
+                <input type="checkbox" name="achievements" id="hotel" class="challenge__achievements-input"/>
+                <label for="hotel">Разгромил отель</label>
+              </div>
+            </div>
+            <div class="challenge__emotions"><span class="challenge__emotions-title">опишите свои эмоции</span>
+              <textarea placeholder="Можно прям в красках, не стесняясь в выражениях" class="challenge__emotions-text"></textarea>
+            </div>
+            <button class="challenge__submit-btn">отправить форму</button>
+          </form>
+        </div>
+      </section>
+    </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__logo"></div>
+      <div class="page-footer__wrapper"><a href="index.html" class="page-footer__logo"></a>
         <div class="page-footer__social-wrapper"><a href="#" class="page-footer__social-link"><i class="icon-twitter"></i></a><a href="#" class="page-footer__social-link"><i class="icon-facebook"></i></a><a href="#" class="page-footer__social-link"><i class="icon-googleplay"></i></a></div><a href="https://github.com/KirKaz12" target="_blank" class="page-footer__developer-link">Разработано <i class="icon-github"></i></a>
       </div>
     </footer>
