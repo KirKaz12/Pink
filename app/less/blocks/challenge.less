@@ -1,7 +1,7 @@
 .challenge {
 	&__form {
 		display: flex;
-		flew-wrap: wrap;
+		flex-wrap: wrap;
 		flex-direction: column;
 		align-items: flex-start;
 	}
@@ -212,6 +212,7 @@
 	//submit
 	&__submit-btn {
 		order: 6;
+		cursor: pointer;
 		display: block;
 		width: 87.5%;
 		max-width: 400px;
@@ -231,6 +232,7 @@
 	.challenge {
 		&__header {
 			font-size: 18px;
+			max-width: 500px;
 		}
 		&__name-group {
 			width: 88.57%;
@@ -253,6 +255,7 @@
 			padding-left: 0;
 			text-transform: uppercase;
 			vertical-align: middle;
+			line-height: 60px;
 		}
 		&__app-group {
 			background: #fff;
@@ -309,13 +312,39 @@
 				width: 100%;
 			}
 			label {
+				position: relative;
 				margin: 0;
 				padding-bottom: 40px;
 				padding-top: 0;
 				margin-bottom: 30px;
+				&::before {
+					font-family: "fontello";
+					line-height: 60px;
+					font-size: 20px;
+					position: absolute;
+					content:'';
+					display: block;
+					height: 60px;
+					width: 65px;
+					background: #e5e5e5;
+					right: 0;
+					top: 0;
+					color: @pink;
+					text-align: center;
+				}
 				span {
 					top: initial;
 					bottom: 0;
+				}
+			}
+			.challenge__number-label {
+				&::before {
+					content: '\f1ac';
+				}
+			}
+			.challenge__mail-label {
+				&::before {
+					content: '\f0e0';
 				}
 			}
 
@@ -335,19 +364,132 @@
 			width: 88.57%;
 			max-width: 700px;
 			border: 2px solid #e5e5e5;
+			padding: 50px 10%;
+			padding-bottom: 20px;
+			margin-bottom: 65px;
+			label {
+				padding-left: 15%;
+			}
 		}
 		&__achievements-title {
+			background: #fff;
 			position: absolute;
-			left: 0;
-			top: 0;
+			left: 50%;
+			margin-left: -211px;
+			top: -9px;
 			display: initial;
-			padding: 0;
+			padding: 0 25px;
 			text-align: left;
 		}
 
 
 		&__emotions {
+			position: relative;
 			order: 5;
+			width: 88.57%;
+			max-width: 700px;
+			padding: 50px 10%;
+			border: 2px solid #e5e5e5;
+			margin-bottom: 65px;
+			&-title {
+				display: initial;
+				padding: 0 25px;
+				position: absolute;
+				background: #fff;
+				left: 50%;
+				top: -9px;
+				margin-left: -116.5px;
+			}
+		}
+	}
+}
+
+@media @desktop-styles {
+	.challenge {
+		&__header {
+			max-width: 820px;
+			margin-bottom: 15px;
+		}
+		&__wrapper {
+			width: 88.57%;
+			max-width: 1000px;
+			margin: 0 auto;
+			&::after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+		}
+		&__form {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		&__name-group {
+			max-width: none;
+			width: 45%;
+			margin: 0;
+			input {
+				width: 75%;
+			}
+			label {
+				margin-bottom: 50px;
+			}
+		}
+		&__app-group {
+			width: 45%;
+			margin-bottom: 65px;
+			padding-bottom: 0;
+			&-wrapper {
+				width: 100%;
+				margin: 0;
+				max-width: none;
+			}
+		}
+		&__contact-group {
+			margin: 0;
+			max-width: none;
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding-left: 6%;
+			padding-right: 6%;
+			margin-bottom: 65px;
+			label {
+				width: 40%;
+			}
+		}
+		&__achievements-group {
+			width: 100%;
+			max-width: none;
+			margin: 0;
+			margin-bottom: 65px;
+		}
+		&__achievements-wrapper {
+			width: 100%;
+			margin: 0;
+			max-width: none;
+			padding-top: 55px;
+			padding-left: 6%;
+			padding-right: 6%;
+			padding-bottom: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			label {
+				width: 32%;
+				padding-left: 7%;
+				padding-bottom: 25px;
+				margin-bottom: 20px;
+			}
+		}
+		&__emotions {
+			width: 100%;
+			margin: 0;
+			max-width: none;
+			padding-left: 6%;
+			padding-right: 6%;
+			margin-bottom: 65px;
 		}
 	}
 }

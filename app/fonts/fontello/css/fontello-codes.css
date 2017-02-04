@@ -6,5 +6,7 @@
 .icon-googleplay:before { content: '\e804'; } /* '' */
 .icon-github:before { content: '\e806'; } /* '' */
 .icon-spin6:before { content: '\e839'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
 .icon-angle-left:before { content: '\f104'; } /* '' */
 .icon-angle-right:before { content: '\f105'; } /* '' */
+.icon-fax:before { content: '\f1ac'; } /* '' */
