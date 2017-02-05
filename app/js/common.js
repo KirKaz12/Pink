@@ -97,45 +97,47 @@ $(document).ready(function() {
 		form = $(".challenge__form"),
 		emotionsText = $("#emotions_text"),
 		submitBtn = $(".challenge__submit-btn"),
+		submitBtnDisabled = "challenge__submit-btn_disabled",//Disable modificator for submit button
 		submitBtnLabel = "<span class='error'></span>",
 		error = "challenge__input_error",//string to add class error
 		errorMessages = {
 			empty: "Обязательное поле",
 			format: "Неверный формат",
 			btnMessage: "Проверьте введенные данные"
-		};
-	form.on("submit", function(e){
-		var inputs = [surname, name, middlename, phone, mail, emotionsText],//Inputs to validate on empty field
-		count = 0; 
+		},
+		count = 0,//counter for checking how many inputs are invalid
+		emptyInputs = [surname, name, middlename, phone, mail, emotionsText];//Inputs to validate on empty field;
 		
-		inputs.forEach(function(i){
-			
-			if(!i.val() || i.val()[0] === " ") { //Checking if field is empty
+	form.on("submit", function(e){
+		emptyInputs.forEach(function(i){
+			if((!i.val() || i.val()[0] === " ") && (!$(i).hasClass(error))) { //Checking if input is empty
 				e.preventDefault();
 				$(i).addClass(error);
-				count++;
-				//console.log(count);
-				//$(i).attr("placeholder", errorMessages.empty);
-			}
-			if($(i).hasClass(error)) {
-				$(i).on("focus", function() {
-					if($(this).hasClass(error)) {
-						$(this).removeClass(error);
-						count--;
-						//console.log(count);
-						if(count<=0) {
-							submitBtn[0].removeChild($("span.error")[0]);
-						}
-					}
-				});
+				count++;//Increment counter when input gets error modificator
 			}
 		});
-		for(var i = 0; i<inputs.length; i++) {
-			if($(inputs[i]).hasClass(error)) {
-				submitBtn.prepend(submitBtnLabel);
-				$("span.error").text(errorMessages.btnMessage);
+		for(var i = 0; i<emptyInputs.length; i++) {
+			if($(emptyInputs[i]).hasClass(error)) {
+				e.preventDefault();
+				if(!submitBtn.children("span.error")[0]) {
+					submitBtn.prepend(submitBtnLabel);//Add label over submit button
+					$("span.error").text(errorMessages.btnMessage);
+					submitBtn.addClass(submitBtnDisabled);//Add "disabled" modificator to submit button
+				}
 				break;
 			}
 		}
-	})
+	});
+	emptyInputs.forEach(function(i){
+		i.on("focus", function() {
+			if($(this).hasClass(error)) {
+			$(this).removeClass(error);//Remove error modificator on focus
+				count--;//Decrement counter when input gets rid of error modificator
+				if(count===0) {//Count = 0  if none of inputs have error modificator
+					submitBtn[0].removeChild($("span.error")[0]);//So remove error label over submit button
+					submitBtn.removeClass(submitBtnDisabled);//Remove "disabled" modificator to submit button
+				}
+			}
+		});
+	});
 });

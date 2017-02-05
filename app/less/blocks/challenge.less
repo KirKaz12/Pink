@@ -19,8 +19,8 @@
 		.text(18px, 30px, @blue);
 	}
 	&__input_error {//Error modificator for inputs
-		outline: 2px solid @pink;
-		border: none !important;
+		outline: none;
+		border-color: @pink !important;
 		&::placeholder {
 			color: red !important;
 		}
@@ -46,6 +46,10 @@
 			min-height: 60px;
 			border: 1px solid #e5e5e5;
 			width: 100%;
+			&:focus {
+				outline: none;
+				border-color: @dark-blue;
+			}
 		}
 		label {
 			position: relative;
@@ -98,6 +102,11 @@
 				width: 40px;
 				height: 40px;
 			}
+			&:hover {
+				&::before {
+					border-color: @dark-blue;
+				}
+			}
 		}
 		input:checked + label {
 			&::before {
@@ -105,10 +114,18 @@
 				height: 15px;
 				border: 15px solid #fff;
 				background: @pink;
-				box-shadow: 0 2px 0 #e5e5e5,
-							0 -2px 0 #e5e5e5,
-							2px 0 0 #e5e5e5,
-							-2px 0 0 #e5e5e5;
+				box-shadow: 0 2px 0 @pink,
+							0 -2px 0 @pink,
+							2px 0 0 @pink,
+							-2px 0 0 @pink;
+			}
+			&:hover {
+				&::before {
+					box-shadow: 0 2px 0 @dark-blue,
+							0 -2px 0 @dark-blue,
+							2px 0 0 @dark-blue,
+							-2px 0 0 @dark-blue;
+				}
 			}
 		}
 	}
@@ -130,6 +147,10 @@
 			min-height: 60px;
 			border: 1px solid #e5e5e5;
 			width: 100%;
+			&:focus {
+				outline: none;
+				border-color: @dark-blue;
+			}
 		}
 		label {
 			.text(14px, 30px, @pink);
@@ -179,6 +200,11 @@
 				font-size: 34px;
 				font-weight: 300;
 			}
+			&:hover {
+				&::before {
+					border-color: @dark-blue;
+				}
+			}
 		}
 		input:checked + label {
 			&::before {
@@ -221,6 +247,10 @@
 			.text(18px, 30px, @blue);
 			min-height: 200px;
 			border: 2px solid #e5e5e5;
+			&:focus {
+				outline: none;
+				border-color: @dark-blue;
+			}
 		}
 	}
 	
@@ -241,6 +271,22 @@
 		outline: none;
 		border: none;
 		margin-bottom: 60px;
+		&:hover {
+			background: darken(#2aab6d, 10%);
+		}
+		&:active {
+			color: rgba(255,255,255, .3);
+		}
+		&_disabled {
+			background: darken(#e5e5e5, 20%);
+			color: #fff;
+			&:hover {
+				background: darken(#e5e5e5, 20%);
+			}
+			&:active {
+				color: #fff;
+			}
+		}
 	}
 }
 
@@ -348,6 +394,11 @@
 					color: @pink;
 					text-align: center;
 				}
+				label > input:focus {
+					label::before {
+						border: 2px solid @dark-blue;
+					}
+				} 
 				span {
 					top: initial;
 					bottom: 0;
