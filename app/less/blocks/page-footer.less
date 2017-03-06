@@ -29,7 +29,7 @@
 		border-radius: 50%;
 		border: 2px solid #e9ebec;
 		margin-right: 5%;
-		transition: all .5s;
+		transition: transform .5s ease-in-out;
 		&:nth-child(3n) {
 			margin-right: 0;
 		}
@@ -38,6 +38,7 @@
 		}
 		&:hover {
 			border-color: @dark-blue;
+			transform: rotate(360deg);
 		}
 		&:active {
 			opacity: .5;
@@ -59,11 +60,16 @@
 			color: @pink;
 			position: relative;
 		    top: 5px;
-		    transition: all .5s;
+		    &::before {
+		    	transition: transform 1s ease-in-out; 
+		    }
 		}
 		&:hover {
 			i {
 				color: @dark-blue;
+				&::before {
+					transform: rotate(360deg);
+				}
 			}
 		}
 	}

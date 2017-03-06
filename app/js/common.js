@@ -21,15 +21,57 @@ function initMap() {
   });
 }//..Google map end
 
-// Custom
-$(document).ready(function() {
+//Animation module
+;(function(){
+	//constructor
+
+	function Animation(element, offset, modificator) {
+		this._element = element;
+		this._offset = offset;
+		this._modificator = modificator;
+	}
+
+	Animation.prototype.animate = function() {
+		var that = this;
+		$(window).on("scroll", function(){
+			if( that._element.offset() && 
+					($(this).scrollTop() > that._element.offset().top/that._offset)) {
+				that._element.addClass(that._modificator);
+			}
+		});
+	}
+
+	
+})();
+
+//Module for page header navigation
+;(function(){
 	var nav = $(".page-header__nav"),
 		navBtn = $(".page-header__btn"),
-		pricesTable = $(".prices__table"),
+		navLink = $(".page-header__menu-link");
+
+	//close navigation by default on mobile
+	nav.addClass("page-header__nav_closed");
+	
+	navBtn.on("click", function() {
+		nav.toggleClass("page-header__nav_closed page-header__nav_opened");
+	});
+	navLink.on("click", function() {//add active state to link on click
+		var item = $(this).parent(".page-header__menu-item").siblings(".page-header__menu-item");
+		item.each(function() {
+			$(this).children(".page-header__menu-link").removeClass("page-header__menu-link_active")
+		});
+		$(this).addClass("page-header__menu-link_active");
+		
+	});
+})();
+
+// Module works with sliders
+;(function() {
+	var pricesTable = $(".prices__table"),
 		hiddenCol = $(".prices__table-col-1"),
 		tableSlider = $(".slides-wrapper"),
-		navLink = $(".page-header__menu-link"),
-		feedback = {
+		feedback = {//Feedback slider settings
 			arrows: true,
 			dots: false,
 			slidesToShow: 1,
@@ -51,27 +93,12 @@ $(document).ready(function() {
 				}
 			]
 		},
-		pricesSlider = {
+		pricesSlider = {//Prices table slider settings
 			arrows: false,
 			dots: true,
 			slidesToShow: 1,
 			slideToScroll: 1
 		};
-	//close navigation by default on mobile
-	nav.addClass("page-header__nav_closed");
-	
-	navBtn.on("click", function() {
-		nav.toggleClass("page-header__nav_closed page-header__nav_opened");
-	});
-	navLink.on("click", function() {//add active state to link on click
-		var item = $(this).parent(".page-header__menu-item").siblings(".page-header__menu-item");
-		item.each(function() {
-			$(this).children(".page-header__menu-link").removeClass("page-header__menu-link_active")
-		});
-		$(this).addClass("page-header__menu-link_active");
-		
-	});
-
 	$(".feedback__list").slick(feedback);
 	if(document.body.clientWidth <= 682) {//add price-table slider on mobile
 		tableSlider.slick(pricesSlider)
@@ -85,10 +112,10 @@ $(document).ready(function() {
 			tableSlider.slick(pricesSlider)
 		} 
 	});
-});
+})();
 
-//Challenge form validation
-$(document).ready(function() {
+//Challenge form validation module
+;(function() {
 	var surname = $("#surname"),
 		name = $("#name"),
 		middlename = $("#middlename"),
@@ -140,4 +167,4 @@ $(document).ready(function() {
 			}
 		});
 	});
-});
+})();

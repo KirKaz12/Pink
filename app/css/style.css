@@ -664,6 +664,18 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+input:focus::-webkit-input-placeholder {
+  opacity: .5;
+}
+input:focus::-moz-placeholder {
+  opacity: .5;
+}
+input:focus:-ms-input-placeholder {
+  opacity: .5;
+}
+input:focus::placeholder {
+  opacity: .5;
+}
 figure {
   margin: 0;
 }
@@ -915,9 +927,14 @@ ul {
   margin-right: 0;
 }
 .page-header .download__logo:hover {
-  opacity: .5;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  position: relative;
+  -webkit-transform: scale(1.2, 1.2);
+      -ms-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  -webkit-transition: -webkit-transform .25s;
+  transition: -webkit-transform .25s;
+  transition: transform .25s;
+  transition: transform .25s, -webkit-transform .25s;
 }
 .page-header .download__logo-link {
   display: inline-block;
@@ -1140,6 +1157,10 @@ ul {
   }
   .page-header__menu-item:last-child {
     margin-right: 0;
+  }
+  .page-header__menu-link {
+    -webkit-transition: border-width 1s;
+    transition: border-width 1s;
   }
   .page-header__menu-link:hover {
     color: #fff;
@@ -1642,6 +1663,15 @@ ul {
   background-color: transparent;
   opacity: 1;
 }
+.feedback .slick-arrow {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.feedback .slick-arrow:active {
+  -webkit-transform: scale(1.2, 1.2);
+      -ms-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
 @media (min-width: 700px) {
   .feedback {
     padding-bottom: 50px;
@@ -2127,8 +2157,10 @@ ul {
           border-radius: 50%;
   border: 2px solid #e9ebec;
   margin-right: 5%;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 .page-footer__social-link:nth-child(3n) {
   margin-right: 0;
@@ -2138,6 +2170,9 @@ ul {
 }
 .page-footer__social-link:hover {
   border-color: #1d2631;
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 .page-footer__social-link:active {
   opacity: .5;
@@ -2163,11 +2198,20 @@ ul {
   color: #d22856;
   position: relative;
   top: 5px;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+}
+.page-footer__developer-link i::before {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 .page-footer__developer-link:hover i {
   color: #1d2631;
+}
+.page-footer__developer-link:hover i::before {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 @media (min-width: 700px) {
   .page-footer {
@@ -2343,7 +2387,74 @@ ul {
   max-width: 300px;
 }
 .photos__item {
+  position: relative;
   margin-bottom: 20px;
+}
+.photos__item::before,
+.photos__item::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background: #829cb7;
+}
+.photos__item::before {
+  left: -4%;
+  top: -2%;
+  width: 2px;
+  height: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.photos__item::after {
+  top: -2%;
+  left: -11px;
+  height: 2px;
+  width: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.photos__item:hover {
+  -webkit-box-shadow: 0 0 25px rgba(40, 54, 69, 0.75);
+          box-shadow: 0 0 25px rgba(40, 54, 69, 0.75);
+}
+.photos__item:hover::before {
+  height: -webkit-calc(104%);
+  height: calc(104%);
+}
+.photos__item:hover::after {
+  width: -webkit-calc(107%);
+  width: calc(107%);
+}
+.photos__figure-wrapper::before,
+.photos__figure-wrapper::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background: #829cb7;
+}
+.photos__figure-wrapper::before {
+  right: -4%;
+  bottom: -2%;
+  width: 2px;
+  height: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.photos__figure-wrapper::after {
+  bottom: -2%;
+  right: -11px;
+  height: 2px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  width: 0;
+}
+.photos__figure-wrapper:hover::before {
+  height: -webkit-calc(104%);
+  height: calc(104%);
+}
+.photos__figure-wrapper:hover::after {
+  width: -webkit-calc(107%);
+  width: calc(107%);
 }
 .photos__caption {
   position: relative;

@@ -19,6 +19,13 @@ img {
 * {
 	box-sizing: border-box;
 }
+input {
+	&:focus{
+		&::placeholder{ 
+			opacity: .5;
+		}
+	}
+}
 figure {
 	margin: 0;
 }

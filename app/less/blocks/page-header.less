@@ -129,8 +129,9 @@
 				margin-right: 0;
 			}
 			&:hover {
-				opacity: .5;
-				transition: all .5s;
+				position: relative;
+				transform: scale(1.2, 1.2);
+				transition: transform .25s;
 			}
 		}
 		&__logo-link {
@@ -342,6 +343,7 @@
 			}
 		}
 		&__menu-link {
+			transition: border-width 1s;
 			&:hover {
 				color: #fff;
 				border-bottom: 2px solid #fff;
