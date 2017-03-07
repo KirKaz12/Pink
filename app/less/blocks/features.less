@@ -160,6 +160,20 @@
 				margin-right: 0;
 			}
 		}
+		&__item {
+		position: relative;
+		z-index: 2;
+		transition: transform 2s cubic-bezier(.29,.68,0,1);
+		transform: translateX(-10000px);
+		&_animated-left {
+			transform: translateX(0px);
+		}
+		width: 30%;
+		margin-right: 5%;
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
 		&__iphone-img {
 			display: inline !important;
 			position: static;

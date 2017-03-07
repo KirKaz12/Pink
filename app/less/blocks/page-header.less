@@ -343,16 +343,42 @@
 			}
 		}
 		&__menu-link {
-			transition: border-width 1s;
+			position: relative;
+			&::after,
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: 0;
+				height: 2px;
+				width: 0;
+				background: #fff;
+				transition: width .25s linear;
+			}
+			&::after {
+				left: 50%;
+			}
+			&::before {
+				right: 50%;
+			}
 			&:hover {
+				&::after {
+					width: 50%;
+				}
+				&::before {
+					width: 50%;
+				}
 				color: #fff;
-				border-bottom: 2px solid #fff;
-				line-height: 14px;
+				//border-bottom: 2px solid #fff;
+				//line-height: 14px;
 			}
 			&_active {
+				&::after,
+				&::before {
+					background: @pink;
+				}
 				&:hover {
 					color: @pink;
-					border-color: @pink;
 				}
 			}
 		}

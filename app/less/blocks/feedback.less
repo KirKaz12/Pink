@@ -166,5 +166,14 @@
 		.slick-prev:before {
 			content: '\f104';
 		}
+		li.slick-active {
+			transition: transform .5s ease-out;
+		}
+
+		ul.slick-slider:active {
+			li.slick-active {
+				transform: scale(.8, .8);
+			}
+		}
 	}
 }

@@ -23,8 +23,10 @@ function initMap() {
 
 //Animation module
 ;(function(){
-	//constructor
 
+	var features = $(".features__item"),
+			timer = $(".effect__timer-img");
+	//constructor
 	function Animation(element, offset, modificator) {
 		this._element = element;
 		this._offset = offset;
@@ -34,13 +36,21 @@ function initMap() {
 	Animation.prototype.animate = function() {
 		var that = this;
 		$(window).on("scroll", function(){
-			if( that._element.offset() && 
-					($(this).scrollTop() > that._element.offset().top/that._offset)) {
-				that._element.addClass(that._modificator);
+			if( $(that._element).offset() && 
+					($(this).scrollTop() > $(that._element).offset().top/that._offset)) {
+				$(that._element).addClass(that._modificator);
 			}
 		});
 	}
-
+	
+	var features1 = new Animation(features[0], 3, "features__item_animated-left");
+		features1.animate();
+	var features2 = new Animation(features[1], 3, "features__item_animated-left");
+		features2.animate();
+	var features3 = new Animation(features[2], 3, "features__item_animated-left");
+		features3.animate();
+	var clock = new Animation(timer, 1.5, "effect__timer-img_animated");
+		clock.animate();
 	
 })();
 
