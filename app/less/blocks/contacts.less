@@ -43,9 +43,58 @@
 		.header(24px, @pink);
 		transition: all .25s;
 		position: relative;
+		&:before,
+		&:after {
+			display: block;
+			background: @dark-blue;
+			content: '';
+			position: absolute;
+			width: 0;
+			bottom: -2.5px;
+			height: 2px;
+			transition: width .25s ease;
+		}
+		&:before {
+			left: 50%;
+		}
+		&:after {
+			right: 50%;
+		}
+		span {
+			position: relative;
+			&:before,
+			&:after {
+				display: block;
+				background: @dark-blue;
+				content: '';
+				position: absolute;
+				width: 0;
+				bottom: -2.5px;
+				height: 2px;
+				transition: width .25s ease;
+			}
+			&:before {
+				left: 50%;
+			}
+			&:after {
+				right: 50%;
+			}
+		}
 		&:hover {
-			text-decoration: underline;
+			//text-decoration: underline;
 			color: @dark-blue;
+			&:after {
+				width: 50%;
+			}
+			&:before {
+				width: 50%;
+			}
+			span:after {
+				width: 50%;
+			}
+			span:before {
+				width: 50%;
+			}
 		}
 		&:active {
 			opacity: .5;

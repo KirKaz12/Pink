@@ -33,7 +33,7 @@ function initMap() {
 		this._modificator = modificator;
 	}
 
-	Animation.prototype.animate = function() {
+	Animation.prototype.animated = function() {
 		var that = this;
 		$(window).on("scroll", function(){
 			if( $(that._element).offset() && 
@@ -44,14 +44,23 @@ function initMap() {
 	}
 	
 	var features1 = new Animation(features[0], 3, "features__item_animated-left");
-		features1.animate();
+		features1.animated();
 	var features2 = new Animation(features[1], 3, "features__item_animated-left");
-		features2.animate();
+		features2.animated();
 	var features3 = new Animation(features[2], 3, "features__item_animated-left");
-		features3.animate();
+		features3.animated();
 	var clock = new Animation(timer, 1.5, "effect__timer-img_animated");
-		clock.animate();
-	
+		clock.animated();
+
+	var uploadFeatures = $(".photos__upload-features");
+	uploadFeatures.on("click", function(e){
+		var target = e.target,
+				activeClass = "photos__upload-label_active";
+		if(!target.matches(".photos__upload-label")
+				|| $(target).hasClass(activeClass)) return
+		$("."+activeClass).removeClass(activeClass);
+		$(target).addClass(activeClass);
+	})
 })();
 
 //Module for page header navigation
@@ -110,17 +119,22 @@ function initMap() {
 			slideToScroll: 1
 		};
 	$(".feedback__list").slick(feedback);
-	if(document.body.clientWidth <= 682) {//add price-table slider on mobile
-		tableSlider.slick(pricesSlider)
-	} 
+	
+	//add price-table slider on mobile
+	if(window.innerWidth <= 700) 
+		tableSlider.slick(pricesSlider);
 	
 	$(window).resize(function() {
-		if(document.body.clientWidth > 682) {//remove price-table slider on tablet on resize
+		/*if(window.innerWidth > 700) {
 			tableSlider.slick("unslick");
 		} 
 		else {
 			tableSlider.slick(pricesSlider)
-		} 
+		} */
+		//remove price-table slider on tablet on resize
+		window.innerWidth > 700 
+											? tableSlider.slick("unslick")
+											: tableSlider.slick(pricesSlider)
 	});
 })();
 

@@ -1546,10 +1546,6 @@ ul {
   .effect__timer-img {
     width: 240px;
     height: 277px;
-    -webkit-transition: -webkit-transform 2s cubic-bezier(0.29, 0.68, 0, 1);
-    transition: -webkit-transform 2s cubic-bezier(0.29, 0.68, 0, 1);
-    transition: transform 2s cubic-bezier(0.29, 0.68, 0, 1);
-    transition: transform 2s cubic-bezier(0.29, 0.68, 0, 1), -webkit-transform 2s cubic-bezier(0.29, 0.68, 0, 1);
     -webkit-transform: translateX(5000px);
         -ms-transform: translateX(5000px);
             transform: translateX(5000px);
@@ -1558,6 +1554,10 @@ ul {
     -webkit-transform: rotate(360deg) translateX(0);
         -ms-transform: rotate(360deg) translateX(0);
             transform: rotate(360deg) translateX(0);
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0, 0.77, 0, 0.77);
+    transition: -webkit-transform 1s cubic-bezier(0, 0.77, 0, 0.77);
+    transition: transform 1s cubic-bezier(0, 0.77, 0, 0.77);
+    transition: transform 1s cubic-bezier(0, 0.77, 0, 0.77), -webkit-transform 1s cubic-bezier(0, 0.77, 0, 0.77);
   }
   .effect__caption {
     width: 50%;
@@ -2099,9 +2099,59 @@ ul {
   transition: all .25s;
   position: relative;
 }
+.contacts [class$="-link"]:before,
+.contacts [class$="-link"]:after {
+  display: block;
+  background: #1d2631;
+  content: '';
+  position: absolute;
+  width: 0;
+  bottom: -2.5px;
+  height: 2px;
+  -webkit-transition: width .25s ease;
+  transition: width .25s ease;
+}
+.contacts [class$="-link"]:before {
+  left: 50%;
+}
+.contacts [class$="-link"]:after {
+  right: 50%;
+}
+.contacts [class$="-link"] span {
+  position: relative;
+}
+.contacts [class$="-link"] span:before,
+.contacts [class$="-link"] span:after {
+  display: block;
+  background: #1d2631;
+  content: '';
+  position: absolute;
+  width: 0;
+  bottom: -2.5px;
+  height: 2px;
+  -webkit-transition: width .25s ease;
+  transition: width .25s ease;
+}
+.contacts [class$="-link"] span:before {
+  left: 50%;
+}
+.contacts [class$="-link"] span:after {
+  right: 50%;
+}
 .contacts [class$="-link"]:hover {
-  text-decoration: underline;
   color: #1d2631;
+}
+.contacts [class$="-link"]:hover:after {
+  width: 50%;
+}
+.contacts [class$="-link"]:hover:before {
+  width: 50%;
+}
+.contacts [class$="-link"]:hover span:after {
+  width: 50%;
+}
+.contacts [class$="-link"]:hover span:before {
+  width: 50%;
 }
 .contacts [class$="-link"]:active {
   opacity: .5;
@@ -2226,10 +2276,10 @@ ul {
           border-radius: 50%;
   border: 2px solid #e9ebec;
   margin-right: 5%;
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.75s ease-in-out;
+  transition: -webkit-transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
 }
 .page-footer__social-link:nth-child(3n) {
   margin-right: 0;
@@ -2465,26 +2515,24 @@ ul {
   position: absolute;
   display: block;
   background: #829cb7;
+  -webkit-transition: all .51s linear;
+  transition: all .51s linear;
 }
 .photos__item::before {
   left: -4%;
   top: -2%;
   width: 2px;
   height: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 .photos__item::after {
   top: -2%;
   left: -11px;
   height: 2px;
   width: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 .photos__item:hover {
-  -webkit-box-shadow: 0 0 25px rgba(40, 54, 69, 0.75);
-          box-shadow: 0 0 25px rgba(40, 54, 69, 0.75);
+  -webkit-box-shadow: 0 0 35px rgba(40, 54, 69, 0.75);
+          box-shadow: 0 0 35px rgba(40, 54, 69, 0.75);
 }
 .photos__item:hover::before {
   height: -webkit-calc(104%);
@@ -2500,21 +2548,19 @@ ul {
   position: absolute;
   display: block;
   background: #829cb7;
+  -webkit-transition: all .51s linear;
+  transition: all .51s linear;
 }
 .photos__figure-wrapper::before {
   right: -4%;
   bottom: -2%;
   width: 2px;
   height: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 .photos__figure-wrapper::after {
   bottom: -2%;
   right: -11px;
   height: 2px;
-  -webkit-transition: 1s;
-  transition: 1s;
   width: 0;
 }
 .photos__figure-wrapper:hover::before {

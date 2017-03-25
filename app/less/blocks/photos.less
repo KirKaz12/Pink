@@ -101,26 +101,23 @@
 			content: '';
 			position: absolute;
 			display: block;
-			background: lighten(@blue, 40%) ;
+			background: lighten(@blue, 40%);
+			transition: all .51s linear;
 		}
 		&::before {
 			left: -4%;
 			top: -2%;
 			width: 2px;
 			height: 0;
-			transition: 1s;
-			//height: calc(100% + 4%);
 		}
 		&::after {
 			top: -2%;
 			left: -11px;
 			height: 2px;
 			width: 0;
-			transition: 1s;
-			//width: calc(100% + 4%);
 		}
 		&:hover {
-			box-shadow: 0 0 25px rgba(40, 54, 69, .75);
+			box-shadow: 0 0 35px rgba(40, 54, 69, .75);
 			&::before {
 				height: calc(100% + 4%);
 			}
@@ -135,20 +132,19 @@
 			content: '';
 			position: absolute;
 			display: block;
-			background: lighten(@blue, 40%) ;
+			background: lighten(@blue, 40%);
+			transition: all .51s linear;
 		}
 		&::before {
 			right: -4%;
 			bottom: -2%;
 			width: 2px;
 			height: 0;
-			transition: 1s;
 		}
 		&::after {
 			bottom: -2%;
 			right: -11px;
 			height: 2px;
-			transition: 1s;
 			width: 0;
 		}
 		&:hover {
